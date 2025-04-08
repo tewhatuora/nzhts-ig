@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical",
+  "publisher": "FHIR Project team",
+  "description": "All codes for http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "version": "4.0.1"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "97ae65ed-77df-4015-be2d-b576156c9119",
+    "timestamp": "2024-11-11T13:46:12+13:00",
+    "total": 3,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active",
+        "display": "Active"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "inactive",
+        "display": "Inactive"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "resolved",
+        "display": "Resolved"
+      }
+    ]
+  },
+  "id": "allergyintolerance-clinical"
+}

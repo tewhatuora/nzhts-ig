@@ -1,0 +1,138 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code",
+  "publisher": "HL7 New Zealand",
+  "description": "All codes for https://standards.digital.health.nz/ns/dhb-code",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "67a78c3a-3ce5-4618-a37b-0e5cd3a3ec91",
+    "timestamp": "2024-11-11T13:48:04+13:00",
+    "total": 20,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "https://standards.digital.health.nz/ns/dhb-code|1.0.0"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00011-K",
+        "display": "Auckland District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00031-E",
+        "display": "Bay of Plenty District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00005-D",
+        "display": "Canterbury District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00036-D",
+        "display": "Capital and Coast District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00012-A",
+        "display": "Counties Manukau District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00032-G",
+        "display": "Hawkes Bay District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00006-F",
+        "display": "Hutt Valley District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00028-E",
+        "display": "Lakes District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00033-J",
+        "display": "Mid Central District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00038-H",
+        "display": "Nelson Marlborough District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00026-A",
+        "display": "Northland District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00025-K",
+        "display": "South Canterbury District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G02328-E",
+        "display": "Southern District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00029-G",
+        "display": "Tairawhiti District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00030-C",
+        "display": "Taranaki District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00027-C",
+        "display": "Waikato District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00037-F",
+        "display": "Wairarapa District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00013-C",
+        "display": "Waitemata District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00039-K",
+        "display": "West Coast District Health Board"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/dhb-code",
+        "code": "G00035-B",
+        "display": "Whanganui District Health Board"
+      }
+    ]
+  },
+  "id": "dhb-code"
+}

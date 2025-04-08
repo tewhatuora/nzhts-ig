@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://nzhts.digital.health.nz/fhir/ValueSet/nz-datum-code",
+  "publisher": "HL7 New Zealand",
+  "description": "All codes for https://standards.digital.health.nz/ns/nz-datum-code",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/nz-datum-code",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "b4430f7a-0e51-4804-9266-c70e27bf927a",
+    "timestamp": "2024-11-11T13:50:08+13:00",
+    "total": 2,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "https://standards.digital.health.nz/ns/nz-datum-code|1.0.0"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "https://standards.digital.health.nz/ns/nz-datum-code",
+        "code": "NZGD2000",
+        "display": "NZGD2000"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/nz-datum-code",
+        "code": "WGS84",
+        "display": "WGS84"
+      }
+    ]
+  },
+  "id": "nz-datum-code"
+}

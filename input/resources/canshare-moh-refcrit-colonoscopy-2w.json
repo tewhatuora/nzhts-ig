@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://nzhts.digital.health.nz/fhir/ValueSet/canshare-moh-refcrit-colonoscopy-2w",
+  "publisher": "Te Aho o Te Kahu",
+  "description": "All codes for http://canshare.co.nz/fhir/CodeSystem/canshare-moh-refcrit-colonoscopy-2w",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://canshare.co.nz/fhir/CodeSystem/canshare-moh-refcrit-colonoscopy-2w",
+        "version": "20240920"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "cdcdaf56-9ac2-4eba-aaae-193254ceed42",
+    "timestamp": "2024-11-11T13:48:50+13:00",
+    "total": 3,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "http://canshare.co.nz/fhir/CodeSystem/canshare-moh-refcrit-colonoscopy-2w|20240920"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://canshare.co.nz/fhir/CodeSystem/canshare-moh-refcrit-colonoscopy-2w",
+        "code": "BOWEL",
+        "display": "Altered bowel habit > 6 weeks duration plus unexplained rectal bleeding, age ≥ 50 years"
+      },
+      {
+        "system": "http://canshare.co.nz/fhir/CodeSystem/canshare-moh-refcrit-colonoscopy-2w",
+        "code": "MALIGNANCY",
+        "display": "Known or suspected colorectal malignancy (imaging or palpable/visible on rectal examination), for pre-operative procedure to exclude synchronous pathology."
+      },
+      {
+        "system": "http://canshare.co.nz/fhir/CodeSystem/canshare-moh-refcrit-colonoscopy-2w",
+        "code": "BLEEDING",
+        "display": "Unexplained rectal bleeding with iron deficiency anaemia"
+      }
+    ]
+  },
+  "id": "canshare-moh-refcrit-colonoscopy-2w"
+}

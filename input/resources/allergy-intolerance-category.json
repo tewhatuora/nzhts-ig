@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://hl7.org/fhir/ValueSet/allergy-intolerance-category",
+  "publisher": "HL7 (FHIR Project)",
+  "description": "All codes for http://hl7.org/fhir/allergy-intolerance-category",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/allergy-intolerance-category",
+        "version": "4.0.1"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "b7292ffe-a57c-48b2-b93f-4cba971adc5c",
+    "timestamp": "2024-11-11T13:49:35+13:00",
+    "total": 4,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "http://hl7.org/fhir/allergy-intolerance-category|4.0.1"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/allergy-intolerance-category",
+        "code": "biologic",
+        "display": "Biologic"
+      },
+      {
+        "system": "http://hl7.org/fhir/allergy-intolerance-category",
+        "code": "environment",
+        "display": "Environment"
+      },
+      {
+        "system": "http://hl7.org/fhir/allergy-intolerance-category",
+        "code": "food",
+        "display": "Food"
+      },
+      {
+        "system": "http://hl7.org/fhir/allergy-intolerance-category",
+        "code": "medication",
+        "display": "Medication"
+      }
+    ]
+  },
+  "id": "allergy-intolerance-category"
+}

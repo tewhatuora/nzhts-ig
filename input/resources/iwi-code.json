@@ -1,0 +1,1093 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://nzhts.digital.health.nz/fhir/ValueSet/iwi-code",
+  "publisher": "HISO",
+  "description": "All codes for https://standards.digital.health.nz/ns/iwi-code",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "version": "2.1.0"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "dbde0b7f-128a-4ce2-a533-84067afc8253",
+    "timestamp": "2024-11-11T13:47:10+13:00",
+    "total": 211,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "https://standards.digital.health.nz/ns/iwi-code|2.1.0"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2004",
+        "display": "Aotea, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "20",
+        "display": "Confederations and Waka, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "4444",
+        "display": "Don't Know"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "44",
+        "display": "Don't Know"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2201",
+        "display": "Hapū affiliated to more than one iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "22",
+        "display": "Hapū affiliated to more than one iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "02",
+        "display": "Hauraki (Coromandel) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2013",
+        "display": "Hauraki / Pare Hauraki, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2302",
+        "display": "Hauraki Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2017",
+        "display": "Horouta, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "21",
+        "display": "Iwi named, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2011",
+        "display": "Kurahaupō, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1104",
+        "display": "Kāti Māmoe"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2006",
+        "display": "Mahuru, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "10",
+        "display": "Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2310",
+        "display": "Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0713",
+        "display": "Maungaharuru Tangitū"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1201",
+        "display": "Moriori"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1002",
+        "display": "Muaūpoko"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2012",
+        "display": "Muriwhenua, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2007",
+        "display": "Māmari, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2005",
+        "display": "Mātaatua, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2018",
+        "display": "Mōkai Pātea, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0511",
+        "display": "Ngā Pōtiki ā Tamapahore"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0804",
+        "display": "Ngā Rauru"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1109",
+        "display": "Ngāi Tahu / Kāi Tahu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0506",
+        "display": "Ngāi Tai (Tauranga Moana/Mātaatua)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0115",
+        "display": "Ngāi Tai ki Tāmaki"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2111",
+        "display": "Ngāi Tai, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0107",
+        "display": "Ngāi Takoto"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0906",
+        "display": "Ngāi Te Ohuake (Rangitīkei)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0502",
+        "display": "Ngāi Te Rangi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0604",
+        "display": "Ngāi Tāmanuhiri"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0104",
+        "display": "Ngāpuhi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0105",
+        "display": "Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0805",
+        "display": "Ngāruahine"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0901",
+        "display": "Ngāti Apa (Rangitīkei)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1113",
+        "display": "Ngāti Apa ki Te Rā Tō"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2110",
+        "display": "Ngāti Apa, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0504",
+        "display": "Ngāti Awa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0201",
+        "display": "Ngāti Hako"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0903",
+        "display": "Ngāti Haua (Taumarunui)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0301",
+        "display": "Ngāti Haua (Waikato)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2102",
+        "display": "Ngāti Haua, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0904",
+        "display": "Ngāti Hauiti (Rangitīkei)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0202",
+        "display": "Ngāti Hei"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0116",
+        "display": "Ngāti Hine (Te Tai Tokerau)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0717",
+        "display": "Ngāti Hinemanu (Heretaunga)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0912",
+        "display": "Ngāti Hinemanu (Rangitīkei)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2114",
+        "display": "Ngāti Hinemanu, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0313",
+        "display": "Ngāti Hinerangi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0712",
+        "display": "Ngāti Hineuru"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0213",
+        "display": "Ngāti Huarere"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0306",
+        "display": "Ngāti Hīkairo"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0102",
+        "display": "Ngāti Kahu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0121",
+        "display": "Ngāti Kahu ki Whangaroa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0703",
+        "display": "Ngāti Kahungunu ki Heretaunga"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0709",
+        "display": "Ngāti Kahungunu ki Tamakinui a Rua"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0708",
+        "display": "Ngāti Kahungunu ki Tamatea"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0702",
+        "display": "Ngāti Kahungunu ki Te Wairoa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0707",
+        "display": "Ngāti Kahungunu ki Te Whanganui-a-Orotu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0704",
+        "display": "Ngāti Kahungunu ki Wairarapa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2112",
+        "display": "Ngāti Kahungunu, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1008",
+        "display": "Ngāti Kauwhata"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0414",
+        "display": "Ngāti Kearoa / Ngāti Tuarā"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1102",
+        "display": "Ngāti Koata"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0309",
+        "display": "Ngāti Korokī Kahukura"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1103",
+        "display": "Ngāti Kuia"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0103",
+        "display": "Ngāti Kurī"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0505",
+        "display": "Ngāti Manawa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0302",
+        "display": "Ngāti Maniapoto"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0118",
+        "display": "Ngāti Manuhiri"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0203",
+        "display": "Ngāti Maru (Hauraki)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0802",
+        "display": "Ngāti Maru (Taranaki)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2103",
+        "display": "Ngāti Maru, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0803",
+        "display": "Ngāti Mutunga (Taranaki)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1202",
+        "display": "Ngāti Mutunga (Wharekauri/Chatham Islands)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2104",
+        "display": "Ngāti Mutunga, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0413",
+        "display": "Ngāti Mākino"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0204",
+        "display": "Ngāti Paoa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0401",
+        "display": "Ngāti Pikiao (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0601",
+        "display": "Ngāti Porou"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0206",
+        "display": "Ngāti Porou ki Harataunga ki Mataora"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0710",
+        "display": "Ngāti Pāhauwera"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0501",
+        "display": "Ngāti Pūkenga"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0207",
+        "display": "Ngāti Pūkenga ki Waiau"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0908",
+        "display": "Ngāti Rangi (Ruapehu, Whanganui)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0503",
+        "display": "Ngāti Ranginui"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0402",
+        "display": "Ngāti Rangiteaorere (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0403",
+        "display": "Ngāti Rangitihi (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0404",
+        "display": "Ngāti Rangiwewehi (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1004",
+        "display": "Ngāti Raukawa (Horowhenua/Manawatū)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2106",
+        "display": "Ngāti Raukawa, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0119",
+        "display": "Ngāti Rehua"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0415",
+        "display": "Ngāti Rongomai (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0806",
+        "display": "Ngāti Ruanui"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0715",
+        "display": "Ngāti Ruapani ki Waikaremoana"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0208",
+        "display": "Ngāti Rāhiri Tumutumu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0711",
+        "display": "Ngāti Rākaipaaka"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1108",
+        "display": "Ngāti Rārua"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0412",
+        "display": "Ngāti Tahu-Ngāti Whaoa (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0807",
+        "display": "Ngāti Tama (Taranaki)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1110",
+        "display": "Ngāti Tama ki Te Tauihu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1007",
+        "display": "Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2107",
+        "display": "Ngāti Tama, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0907",
+        "display": "Ngāti Tamakōpiri (Rangitīkei)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0310",
+        "display": "Ngāti Tamaoho"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0210",
+        "display": "Ngāti Tamaterā"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0211",
+        "display": "Ngāti Tara Tokanui"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0406",
+        "display": "Ngāti Tarāwhai (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0305",
+        "display": "Ngāti Te Ata"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0308",
+        "display": "Ngāti Tiipa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2108",
+        "display": "Ngāti Toa, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1111",
+        "display": "Ngāti Toarangatira (Te Waipounamu/South Island)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1005",
+        "display": "Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0120",
+        "display": "Ngāti Torehina ki Mata-ure ō Hau"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1009",
+        "display": "Ngāti Tukorehe"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0411",
+        "display": "Ngāti Tūwharetoa (ki Taupō)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0513",
+        "display": "Ngāti Tūwharetoa ki Kawerau"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2113",
+        "display": "Ngāti Tūwharetoa, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0108",
+        "display": "Ngāti Wai"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0410",
+        "display": "Ngāti Whakaue (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0212",
+        "display": "Ngāti Whanaunga"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0510",
+        "display": "Ngāti Whare"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0905",
+        "display": "Ngāti Whitikaupeka (Rangitīkei)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0109",
+        "display": "Ngāti Whātua (not Ōrākei or Kaipara)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0113",
+        "display": "Ngāti Whātua o Kaipara"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0114",
+        "display": "Ngāti Whātua o Ōrākei"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2008",
+        "display": "Ngātokimatawhaorua, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "9999",
+        "display": "Not Stated"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "99",
+        "display": "Not Stated"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2009",
+        "display": "Nukutere, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "NZIWI",
+        "display": "NZ IWI"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0810",
+        "display": "Pakakohi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0205",
+        "display": "Patukirikiri"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1003",
+        "display": "Rangitāne (Manawatū)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0706",
+        "display": "Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1107",
+        "display": "Rangitāne (Te Waipounamu/South Island)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0714",
+        "display": "Rangitāne o Tamaki nui ā Rua"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2105",
+        "display": "Rangitāne, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0303",
+        "display": "Raukawa (Waikato)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "5555",
+        "display": "Refused To Answer"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "55",
+        "display": "Refused To Answer"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "23",
+        "display": "Region known, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0307",
+        "display": "Rereahu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "8888",
+        "display": "Response Outside Scope"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "88",
+        "display": "Response Outside Scope"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "7777",
+        "display": "Response Unidentifiable"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "77",
+        "display": "Response Unidentifiable"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0701",
+        "display": "Rongomaiwahine (Te Māhia)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0603",
+        "display": "Rongowhakaata"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "12",
+        "display": "Rēkohu/Wharekauri (Chatham Islands) Region Imi/Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2312",
+        "display": "Rēkohu/Wharekauri Region, Imi/Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0312",
+        "display": "Tainui Awhiro"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2001",
+        "display": "Tainui, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0910",
+        "display": "Tamahaki (Ruapehu, Waimarino)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0911",
+        "display": "Tamakana (Ruapehu, Waimarino)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0809",
+        "display": "Tangāhoe"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0405",
+        "display": "Tapuika (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0808",
+        "display": "Taranaki"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "08",
+        "display": "Taranaki Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2308",
+        "display": "Taranaki Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2016",
+        "display": "Tauranga Moana, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "05",
+        "display": "Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2305",
+        "display": "Tauranga Moana/Mātaatua Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0605",
+        "display": "Te Aitanga ā Hauiti"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0602",
+        "display": "Te Aitanga-a-Māhaki"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2002",
+        "display": "Te Arawa, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "04",
+        "display": "Te Arawa/Taupō (Rotorua/Taupō) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2304",
+        "display": "Te Arawa/Taupō Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0902",
+        "display": "Te Ati Haunui-a-Pāpārangi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0801",
+        "display": "Te Atiawa (Taranaki)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1101",
+        "display": "Te Atiawa (Te Waipounamu/South Island)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1001",
+        "display": "Te Atiawa (Te Whanganui-a-Tara/Wellington)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1006",
+        "display": "Te Atiawa ki Whakarongotai"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2101",
+        "display": "Te Atiawa, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0101",
+        "display": "Te Aupōuri"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0716",
+        "display": "Te Hika o Pāpāuma"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0110",
+        "display": "Te Kawerau ā Maki"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "07",
+        "display": "Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2307",
+        "display": "Te Matau-a-Māui/Wairarapa Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0117",
+        "display": "Te Paatu"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0106",
+        "display": "Te Rarawa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0112",
+        "display": "Te Roroa"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "06",
+        "display": "Te Tai Rāwhiti (East Coast) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2306",
+        "display": "Te Tai Rāwhiti Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "01",
+        "display": "Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2301",
+        "display": "Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2015",
+        "display": "Te Tauihu o Te Waka a Māui, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0512",
+        "display": "Te Upokorehe"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0111",
+        "display": "Te Uri-o-Hau"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "11",
+        "display": "Te Waipounamu (South Island) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2311",
+        "display": "Te Waipounamu Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0509",
+        "display": "Te Whānau-ā-Apanui"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0311",
+        "display": "Te Ākitai-Waiohua"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2010",
+        "display": "Tokomaru, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2003",
+        "display": "Tākitimu, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0507",
+        "display": "Tūhoe"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0407",
+        "display": "Tūhourangi (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2014",
+        "display": "Tūranganui a Kiwa, iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0909",
+        "display": "Uenuku (Ruapehu, Waimarino)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0408",
+        "display": "Uenuku-Kōpako (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0304",
+        "display": "Waikato"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "03",
+        "display": "Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2303",
+        "display": "Waikato/Te Rohe Pōtae Region, Iwi not named"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0409",
+        "display": "Waitaha (Te Arawa)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "1112",
+        "display": "Waitaha (Te Waipounamu/South Island)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2109",
+        "display": "Waitaha, region not known"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "0508",
+        "display": "Whakatōhea"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "09",
+        "display": "Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/iwi-code",
+        "code": "2309",
+        "display": "Whanganui/Rangitīkei Region, Iwi not named"
+      }
+    ]
+  },
+  "id": "iwi-code"
+}

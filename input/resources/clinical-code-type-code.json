@@ -1,0 +1,73 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://nzhts.digital.health.nz/fhir/ValueSet/clinical-code-type-code",
+  "publisher": "HISO",
+  "description": "All codes for https://standards.digital.health.nz/ns/clinical-code-type-code",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "version": "20221115"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "f6b4559d-fc77-447b-a5a8-2a0caab94e2b",
+    "timestamp": "2024-11-11T13:43:01+13:00",
+    "total": 7,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "https://standards.digital.health.nz/ns/clinical-code-type-code|20221115"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "A",
+        "display": "Diagnosis"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "D",
+        "display": "DSM-IV"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "E",
+        "display": "External cause of injury"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "B",
+        "display": "Injury"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "M",
+        "display": "Morphology (pathology)"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "O",
+        "display": "Operation/Procedure"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/clinical-code-type-code",
+        "code": "V",
+        "display": "V code (supplementary classification)"
+      }
+    ]
+  },
+  "id": "clinical-code-type-code"
+}

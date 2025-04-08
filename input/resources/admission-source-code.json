@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://nzhts.digital.health.nz/fhir/ValueSet/admission-source-code",
+  "publisher": "HISO",
+  "description": "All codes for https://standards.digital.health.nz/ns/admission-source-code",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/admission-source-code",
+        "version": "20221115"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "91e1777a-0564-42e8-b4d9-fa15863b6ad9",
+    "timestamp": "2024-11-11T13:43:02+13:00",
+    "total": 2,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "https://standards.digital.health.nz/ns/admission-source-code|20221115"
+      },
+      {
+        "name": "count",
+        "valueInteger": 2147483647
+      },
+      {
+        "name": "offset",
+        "valueInteger": 0
+      }
+    ],
+    "contains": [
+      {
+        "system": "https://standards.digital.health.nz/ns/admission-source-code",
+        "code": "R",
+        "display": "Routine admission"
+      },
+      {
+        "system": "https://standards.digital.health.nz/ns/admission-source-code",
+        "code": "T",
+        "display": "Transferred from another facility"
+      }
+    ]
+  },
+  "id": "admission-source-code"
+}

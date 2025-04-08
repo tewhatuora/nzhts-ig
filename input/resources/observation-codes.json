@@ -1,0 +1,11 @@
+{
+  "resourceType": "OperationOutcome",
+  "issue": [
+    {
+      "severity": "error",
+      "code": "business-rule",
+      "diagnostics": "[f181fee6-ea19-44ec-905f-0710d5543902]: The expansion of value set http://hl7.org/fhir/ValueSet/observation-codes was too costly."
+    }
+  ],
+  "id": "observation-codes"
+}
