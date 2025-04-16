@@ -16,3 +16,7 @@ The IG is generated from a snapshot downloaded from the NZHTS FHIR API. The inte
 ## Dependencies
 
 {% include dependency-table.xhtml %}
+
+## Intellectual property
+
+{% include ip-statements.xhtml %}
