@@ -222,3 +222,5 @@ parameters:
     - CodeSystem/*
     - ValueSet/*
     - ConceptMap/*
+  apply-version: false
+  
