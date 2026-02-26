@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "tewhatuora.nzhts",
-  "url": "fhir-ig.digital.health.nz/nzhts/ImplementationGuide/tewhatuora.nzhts",
+  "url": "https://fhir-ig.digital.health.nz/nzhts/ImplementationGuide/tewhatuora.nzhts",
   "version": "0.1.0",
   "name": "nzhts",
   "title": "New Zealand Health Terminology Service (NZHTS) Implementation Guide",

@@ -2,8 +2,8 @@
   "resourceType": "ValueSet",
   "id": "practitioner-additional-authorisation-code",
   "meta": {
-    "versionId": "10",
-    "lastUpdated": "2025-12-05T11:32:55.944+13:00",
+    "versionId": "1",
+    "lastUpdated": "2026-02-24T17:58:40.910+13:00",
     "tag": [
       {
         "system": "https://standards.digital.health.nz/ns/nzhts-usage-tags",

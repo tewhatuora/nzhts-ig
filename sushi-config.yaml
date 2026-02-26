@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: tewhatuora.nzhts
-canonical: fhir-ig.digital.health.nz/nzhts
+canonical: https://fhir-ig.digital.health.nz/nzhts
 name: nzhts
 title: New Zealand Health Terminology Service (NZHTS) Implementation Guide
 description: FHIR Iimplementation Guide for the NZHTS generated from the NZHTS API

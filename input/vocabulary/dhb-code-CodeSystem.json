@@ -2,12 +2,12 @@
   "resourceType": "CodeSystem",
   "id": "dhb-code",
   "meta": {
-    "versionId": "6",
-    "lastUpdated": "2025-12-04T23:09:48.129+13:00",
+    "versionId": "1",
+    "lastUpdated": "2026-02-24T17:34:42.237+13:00",
     "tag": [
       {
-        "code": "FHIR",
-        "system": "https://standards.digital.health.nz/ns/nzhts-usage-tags"
+        "system": "https://standards.digital.health.nz/ns/nzhts-usage-tags",
+        "code": "FHIR"
       }
     ]
   },
