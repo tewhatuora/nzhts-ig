@@ -1,0 +1,2587 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "e0b77a14-1798-4245-be29-c35efe9bc1a2",
+  "text": {
+    "status": "generated",
+    "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003EHAPI FHIR Server\u003C/div\u003E"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature",
+      "extension": [
+        {
+          "url": "definition",
+          "valueCanonical": "http://hl7.org/fhir/uv/tx-tests/FeatureDefinition/test-version"
+        },
+        {
+          "url": "value",
+          "valueCode": "1.7.6"
+        },
+        {
+          "url": "qualifier",
+          "extension": [
+            {
+              "url": "name",
+              "valueCode": "mode"
+            },
+            {
+              "url": "value",
+              "valueCode": "ontoserver"
+            },
+            {
+              "url": "value",
+              "valueCode": "flat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature",
+      "extension": [
+        {
+          "url": "definition",
+          "valueCanonical": "http://hl7.org/fhir/uv/tx-ecosystem/FeatureDefinition/CodeSystemAsParameter"
+        },
+        {
+          "url": "value",
+          "valueBoolean": true
+        }
+      ]
+    }
+  ],
+  "url": "https://nzhts.digital.health.nz/fhir/metadata",
+  "version": "6.24.2.1781739358409",
+  "name": "FHIR_Conformance_statement_for_Ontoserver",
+  "title": "FHIR Conformance statement for OntoserverÂ®",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-18T11:35:49.725+12:00",
+  "publisher": "Te Whatu Ora - Health New Zealand",
+  "contact": [
+    {
+      "name": "NZHTS Support Desk",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "standards@health.govt.nz"
+        }
+      ]
+    }
+  ],
+  "description": "NZHTS instance of Ontoserver implementing the HL7 FHIR terminology server specification",
+  "kind": "instance",
+  "instantiates": [
+    "http://hl7.org/fhir/CapabilityStatement/terminology-server",
+    "http://hl7.org/fhir/uv/subscriptions-backport/CapabilityStatement/backport-subscription-server-r4"
+  ],
+  "software": {
+    "extension": [
+      {
+        "url": "http://ontoserver.csiro.au/profiles/ontoserver-versions",
+        "extension": [
+          {
+            "url": "snomedIndexVersion",
+            "valueString": "2.0.15"
+          },
+          {
+            "url": "loincIndexVersion",
+            "valueString": "2.0.7"
+          },
+          {
+            "url": "fhirIndexVersion",
+            "valueString": "2.9.0"
+          }
+        ]
+      }
+    ],
+    "name": "Ontoserver®",
+    "version": "6.24.2",
+    "releaseDate": "2026-03-11T22:49:11+13:00"
+  },
+  "implementation": {
+    "extension": [
+      {
+        "url": "http://ontoserver.csiro.au/profiles/ontoserver-endpoints",
+        "extension": [
+          {
+            "url": "api",
+            "valueUri": "https://nzhts.digital.health.nz/api"
+          },
+          {
+            "url": "synd",
+            "valueUri": "https://nzhts.digital.health.nz/synd"
+          }
+        ]
+      }
+    ],
+    "description": "NZHTS Production Ontoserver",
+    "url": "https://nzhts.digital.health.nz/fhir"
+  },
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+xml",
+    "xml",
+    "application/fhir+json",
+    "json",
+    "application/x-turtle",
+    "ttl"
+  ],
+  "implementationGuide": [
+    "http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "security": {
+        "extension": [
+          {
+            "url": "http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris",
+            "extension": [
+              {
+                "url": "authorize",
+                "valueUri": "https://authenticate.nzhts.digital.health.nz/auth/realms/nzhts/protocol/openid-connect/auth"
+              },
+              {
+                "url": "token",
+                "valueUri": "https://authenticate.nzhts.digital.health.nz/auth/realms/nzhts/protocol/openid-connect/token"
+              }
+            ]
+          }
+        ],
+        "cors": true,
+        "service": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                "code": "SMART-on-FHIR"
+              }
+            ],
+            "text": "OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)"
+          }
+        ]
+      },
+      "resource": [
+        {
+          "type": "Account",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Account",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ActivityDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "AdverseEvent",
+          "profile": "http://hl7.org/fhir/StructureDefinition/AdverseEvent",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "AllergyIntolerance",
+          "profile": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Appointment",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Appointment",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "AppointmentResponse",
+          "profile": "http://hl7.org/fhir/StructureDefinition/AppointmentResponse",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "AuditEvent",
+          "profile": "http://hl7.org/fhir/StructureDefinition/AuditEvent",
+          "interaction": [
+            {
+              "code": "create"
+            }
+          ],
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Basic",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Basic",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Binary",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Binary",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "BiologicallyDerivedProduct",
+          "profile": "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "BodyStructure",
+          "profile": "http://hl7.org/fhir/StructureDefinition/BodyStructure",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Bundle",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Bundle",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "update"
+            },
+            {
+              "code": "vread"
+            },
+            {
+              "code": "read"
+            },
+            {
+              "code": "patch"
+            },
+            {
+              "code": "history-instance"
+            },
+            {
+              "code": "history-type"
+            },
+            {
+              "code": "delete"
+            },
+            {
+              "code": "create"
+            }
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "searchParam": [
+            {
+              "name": "_sort",
+              "type": "string"
+            },
+            {
+              "name": "_count",
+              "type": "number"
+            },
+            {
+              "name": "_id",
+              "type": "string",
+              "documentation": "The ID of the resource"
+            },
+            {
+              "name": "_lastUpdated",
+              "type": "date",
+              "documentation": "Only return resources which were last updated as specified by the given range"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "The security of the resource"
+            },
+            {
+              "name": "_tag",
+              "type": "token",
+              "documentation": "The tag of the resource"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "Persistent identifier for the bundle"
+            },
+            {
+              "name": "type",
+              "type": "token",
+              "documentation": "document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection"
+            },
+            {
+              "name": "x-syndication-status",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            },
+            {
+              "name": "meta-delete",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-delete"
+            },
+            {
+              "name": "meta-add",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-add"
+            },
+            {
+              "name": "meta",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta"
+            },
+            {
+              "name": "diff",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+            }
+          ]
+        },
+        {
+          "type": "CapabilityStatement",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CapabilityStatement",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CarePlan",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CarePlan",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CareTeam",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CareTeam",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CatalogEntry",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CatalogEntry",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ChargeItem",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ChargeItem",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ChargeItemDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Claim",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Claim",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ClaimResponse",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ClinicalImpression",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ClinicalImpression",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CodeSystem",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CodeSystem",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "update",
+              "documentation": "The `CodeSystem.url` cannot equal the well-known code system URLs for SNOMED CT and LOINC if `CodeSystem.content == COMPLETE`. Otherwise, the `CodeSystem.valueSet` URI cannot overlap with the URLs for the implicit ValueSets of SNOMED CT and LOINC."
+            },
+            {
+              "code": "vread"
+            },
+            {
+              "code": "read"
+            },
+            {
+              "code": "patch"
+            },
+            {
+              "code": "history-instance"
+            },
+            {
+              "code": "history-type"
+            },
+            {
+              "code": "delete"
+            },
+            {
+              "code": "create",
+              "documentation": "The `CodeSystem.url` cannot equal the well-known code system URLs for SNOMED CT and LOINC if `CodeSystem.content == COMPLETE`. Otherwise, the `CodeSystem.valueSet` URI cannot overlap with the URLs for the implicit ValueSets of SNOMED CT and LOINC."
+            }
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "searchParam": [
+            {
+              "name": "_sort",
+              "type": "string"
+            },
+            {
+              "name": "_count",
+              "type": "number"
+            },
+            {
+              "name": "_id",
+              "type": "string",
+              "documentation": "The ID of the resource"
+            },
+            {
+              "name": "_lastUpdated",
+              "type": "date",
+              "documentation": "Only return resources which were last updated as specified by the given range"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "The security of the resource"
+            },
+            {
+              "name": "_tag",
+              "type": "token",
+              "documentation": "The tag of the resource"
+            },
+            {
+              "name": "content-mode",
+              "type": "token",
+              "documentation": "not-present | example | fragment | complete | supplement"
+            },
+            {
+              "name": "context",
+              "type": "token",
+              "documentation": "A use context assigned to the code system"
+            },
+            {
+              "name": "context-type",
+              "type": "token",
+              "documentation": "A type of use context assigned to the code system"
+            },
+            {
+              "name": "context-type-value",
+              "type": "composite",
+              "documentation": "A use context type and value assigned to the code system"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The code system publication date"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "documentation": "The description of the code system"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "External identifier for the code system"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Computationally friendly name of the code system"
+            },
+            {
+              "name": "publisher",
+              "type": "string",
+              "documentation": "Name of the publisher of the code system"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "The current status of the code system"
+            },
+            {
+              "name": "system",
+              "type": "uri",
+              "documentation": "The system for any codes defined by this code system (same as 'url')"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "documentation": "The human-friendly name of the code system"
+            },
+            {
+              "name": "url",
+              "type": "uri",
+              "documentation": "The uri that identifies the code system"
+            },
+            {
+              "name": "version",
+              "type": "token",
+              "documentation": "The business version of the code system"
+            },
+            {
+              "name": "x-syndication-status",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "validate-code",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/CodeSystemValueSet-it-validate-code"
+            },
+            {
+              "name": "subsumes",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/CodeSystem-it-subsumes"
+            },
+            {
+              "name": "lookup",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/CodeSystem-t-lookup"
+            },
+            {
+              "name": "find-matches",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/CodeSystem-it-find-matches"
+            },
+            {
+              "name": "x-upload-external",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/CodeSystem-t-x-upload-external",
+              "documentation": "SNOMED CT and LOINC can also be loaded by directly POSTing a ZIP file to this operation."
+            },
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            },
+            {
+              "name": "meta-delete",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-delete"
+            },
+            {
+              "name": "meta-add",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-add"
+            },
+            {
+              "name": "meta",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta"
+            },
+            {
+              "name": "diff",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+            }
+          ]
+        },
+        {
+          "type": "Communication",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Communication",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CommunicationRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CompartmentDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CompartmentDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Composition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Composition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ConceptMap",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ConceptMap",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "update",
+              "documentation": "The `ConceptMap.url` cannot overlap with the URLs for the implicit ConceptMaps of SNOMED CT and LOINC."
+            },
+            {
+              "code": "vread"
+            },
+            {
+              "code": "read"
+            },
+            {
+              "code": "patch"
+            },
+            {
+              "code": "history-instance"
+            },
+            {
+              "code": "history-type"
+            },
+            {
+              "code": "delete"
+            },
+            {
+              "code": "create",
+              "documentation": "The `ConceptMap.url` cannot overlap with the URLs for the implicit ConceptMaps of SNOMED CT and LOINC."
+            }
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "searchParam": [
+            {
+              "name": "_sort",
+              "type": "string"
+            },
+            {
+              "name": "_count",
+              "type": "number"
+            },
+            {
+              "name": "_id",
+              "type": "string",
+              "documentation": "The ID of the resource"
+            },
+            {
+              "name": "_lastUpdated",
+              "type": "date",
+              "documentation": "Only return resources which were last updated as specified by the given range"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "The security of the resource"
+            },
+            {
+              "name": "_tag",
+              "type": "token",
+              "documentation": "The tag of the resource"
+            },
+            {
+              "name": "context",
+              "type": "token",
+              "documentation": "A use context assigned to the concept map"
+            },
+            {
+              "name": "context-type",
+              "type": "token",
+              "documentation": "A type of use context assigned to the concept map"
+            },
+            {
+              "name": "context-type-value",
+              "type": "composite",
+              "documentation": "A use context type and value assigned to the concept map"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The concept map publication date"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "documentation": "The description of the concept map"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "External identifier for the concept map"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Computationally friendly name of the concept map"
+            },
+            {
+              "name": "publisher",
+              "type": "string",
+              "documentation": "Name of the publisher of the concept map"
+            },
+            {
+              "name": "source-code",
+              "type": "token",
+              "documentation": "Identifies element being mapped"
+            },
+            {
+              "name": "source-system",
+              "type": "uri",
+              "documentation": "Source system where concepts to be mapped are defined"
+            },
+            {
+              "name": "source-uri",
+              "type": "token",
+              "documentation": "The source value set that contains the concepts that are being mapped"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "The current status of the concept map"
+            },
+            {
+              "name": "target-code",
+              "type": "token",
+              "documentation": "Code that identifies the target element"
+            },
+            {
+              "name": "target-system",
+              "type": "uri",
+              "documentation": "Target system that the concepts are to be mapped to"
+            },
+            {
+              "name": "target-uri",
+              "type": "token",
+              "documentation": "The target value set which provides context for the mappings"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "documentation": "The human-friendly name of the concept map"
+            },
+            {
+              "name": "url",
+              "type": "uri",
+              "documentation": "The uri that identifies the concept map"
+            },
+            {
+              "name": "version",
+              "type": "token",
+              "documentation": "The business version of the concept map"
+            },
+            {
+              "name": "x-syndication-status",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "translate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/ConceptMap-it-translate"
+            },
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            },
+            {
+              "name": "meta-delete",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-delete"
+            },
+            {
+              "name": "meta-add",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-add"
+            },
+            {
+              "name": "meta",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta"
+            },
+            {
+              "name": "diff",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Condition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Consent",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Consent",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Contract",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Contract",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Coverage",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Coverage",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CoverageEligibilityRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "CoverageEligibilityResponse",
+          "profile": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DetectedIssue",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DetectedIssue",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Device",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Device",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DeviceDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DeviceDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DeviceMetric",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DeviceMetric",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DeviceRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DeviceRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DeviceUseStatement",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DiagnosticReport",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DocumentManifest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DocumentManifest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "DocumentReference",
+          "profile": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "EffectEvidenceSynthesis",
+          "profile": "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Encounter",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Encounter",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Endpoint",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Endpoint",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "EnrollmentRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "EnrollmentResponse",
+          "profile": "http://hl7.org/fhir/StructureDefinition/EnrollmentResponse",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "EpisodeOfCare",
+          "profile": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "EventDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/EventDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Evidence",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Evidence",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "EvidenceVariable",
+          "profile": "http://hl7.org/fhir/StructureDefinition/EvidenceVariable",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ExampleScenario",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ExampleScenario",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ExplanationOfBenefit",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "FamilyMemberHistory",
+          "profile": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Flag",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Flag",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Goal",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Goal",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "GraphDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/GraphDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Group",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Group",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "GuidanceResponse",
+          "profile": "http://hl7.org/fhir/StructureDefinition/GuidanceResponse",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "HealthcareService",
+          "profile": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ImagingStudy",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Immunization",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Immunization",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ImmunizationEvaluation",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ImmunizationRecommendation",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ImplementationGuide",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ImplementationGuide",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "InsurancePlan",
+          "profile": "http://hl7.org/fhir/StructureDefinition/InsurancePlan",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Invoice",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Invoice",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Library",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Library",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Linkage",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Linkage",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "List",
+          "profile": "http://hl7.org/fhir/StructureDefinition/List",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Location",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Location",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Measure",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Measure",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MeasureReport",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MeasureReport",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Media",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Media",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Medication",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Medication",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicationAdministration",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicationDispense",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicationKnowledge",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicationKnowledge",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicationRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicationStatement",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProduct",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProduct",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductAuthorization",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductAuthorization",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductContraindication",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductContraindication",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductIndication",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductIndication",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductIngredient",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductInteraction",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductInteraction",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductManufactured",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductPackaged",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductPharmaceutical",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductPharmaceutical",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MedicinalProductUndesirableEffect",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MedicinalProductUndesirableEffect",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MessageDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MessageDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MessageHeader",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MessageHeader",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "MolecularSequence",
+          "profile": "http://hl7.org/fhir/StructureDefinition/MolecularSequence",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "NamingSystem",
+          "profile": "http://hl7.org/fhir/StructureDefinition/NamingSystem",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "update"
+            },
+            {
+              "code": "vread"
+            },
+            {
+              "code": "read"
+            },
+            {
+              "code": "patch"
+            },
+            {
+              "code": "history-instance"
+            },
+            {
+              "code": "history-type"
+            },
+            {
+              "code": "delete"
+            },
+            {
+              "code": "create"
+            }
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "searchParam": [
+            {
+              "name": "_sort",
+              "type": "string"
+            },
+            {
+              "name": "_count",
+              "type": "number"
+            },
+            {
+              "name": "_id",
+              "type": "string",
+              "documentation": "The ID of the resource"
+            },
+            {
+              "name": "_lastUpdated",
+              "type": "date",
+              "documentation": "Only return resources which were last updated as specified by the given range"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "The security of the resource"
+            },
+            {
+              "name": "_tag",
+              "type": "token",
+              "documentation": "The tag of the resource"
+            },
+            {
+              "name": "context",
+              "type": "token",
+              "documentation": "A use context assigned to the naming system"
+            },
+            {
+              "name": "context-type",
+              "type": "token",
+              "documentation": "A type of use context assigned to the naming system"
+            },
+            {
+              "name": "context-type-value",
+              "type": "composite",
+              "documentation": "A use context type and value assigned to the naming system"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The naming system publication date"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "documentation": "The description of the naming system"
+            },
+            {
+              "name": "id-type",
+              "type": "token",
+              "documentation": "oid | uuid | uri | other"
+            },
+            {
+              "name": "kind",
+              "type": "token",
+              "documentation": "codesystem | identifier | root"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Computationally friendly name of the naming system"
+            },
+            {
+              "name": "publisher",
+              "type": "string",
+              "documentation": "Name of the publisher of the naming system"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "The current status of the naming system"
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "documentation": "The unique identifier"
+            },
+            {
+              "name": "x-syndication-status",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "preferred-id",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/NamingSystem-t-preferred-id"
+            },
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            },
+            {
+              "name": "meta-delete",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-delete"
+            },
+            {
+              "name": "meta-add",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-add"
+            },
+            {
+              "name": "meta",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta"
+            },
+            {
+              "name": "diff",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+            }
+          ]
+        },
+        {
+          "type": "NutritionOrder",
+          "profile": "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Observation",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Observation",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ObservationDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ObservationDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "OperationDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/OperationDefinition",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ],
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "OperationOutcome",
+          "profile": "http://hl7.org/fhir/StructureDefinition/OperationOutcome",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Organization",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Organization",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "OrganizationAffiliation",
+          "profile": "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Parameters",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Parameters",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Patient",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Patient",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "PaymentNotice",
+          "profile": "http://hl7.org/fhir/StructureDefinition/PaymentNotice",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "PaymentReconciliation",
+          "profile": "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Person",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Person",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "PlanDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Practitioner",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "PractitionerRole",
+          "profile": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Procedure",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Procedure",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Provenance",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Provenance",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Questionnaire",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Questionnaire",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "QuestionnaireResponse",
+          "profile": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "RelatedPerson",
+          "profile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "RequestGroup",
+          "profile": "http://hl7.org/fhir/StructureDefinition/RequestGroup",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ResearchDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ResearchDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ResearchElementDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ResearchElementDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ResearchStudy",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ResearchStudy",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ResearchSubject",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ResearchSubject",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "RiskAssessment",
+          "profile": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "RiskEvidenceSynthesis",
+          "profile": "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Schedule",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Schedule",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SearchParameter",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SearchParameter",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ServiceRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Slot",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Slot",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Specimen",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Specimen",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SpecimenDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "StructureDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "update"
+            },
+            {
+              "code": "vread"
+            },
+            {
+              "code": "read"
+            },
+            {
+              "code": "patch"
+            },
+            {
+              "code": "history-instance"
+            },
+            {
+              "code": "history-type"
+            },
+            {
+              "code": "delete"
+            },
+            {
+              "code": "create"
+            }
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "searchParam": [
+            {
+              "name": "_sort",
+              "type": "string"
+            },
+            {
+              "name": "_count",
+              "type": "number"
+            },
+            {
+              "name": "_id",
+              "type": "string",
+              "documentation": "The ID of the resource"
+            },
+            {
+              "name": "_lastUpdated",
+              "type": "date",
+              "documentation": "Only return resources which were last updated as specified by the given range"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "The security of the resource"
+            },
+            {
+              "name": "_tag",
+              "type": "token",
+              "documentation": "The tag of the resource"
+            },
+            {
+              "name": "context",
+              "type": "token",
+              "documentation": "A use context assigned to the structure definition"
+            },
+            {
+              "name": "context-type",
+              "type": "token",
+              "documentation": "A type of use context assigned to the structure definition"
+            },
+            {
+              "name": "context-type-value",
+              "type": "composite",
+              "documentation": "A use context type and value assigned to the structure definition"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The structure definition publication date"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "documentation": "The description of the structure definition"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "External identifier for the structure definition"
+            },
+            {
+              "name": "kind",
+              "type": "token",
+              "documentation": "primitive-type | complex-type | resource | logical"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Computationally friendly name of the structure definition"
+            },
+            {
+              "name": "publisher",
+              "type": "string",
+              "documentation": "Name of the publisher of the structure definition"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "The current status of the structure definition"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "documentation": "The human-friendly name of the structure definition"
+            },
+            {
+              "name": "type",
+              "type": "token",
+              "documentation": "Type defined or constrained by this structure"
+            },
+            {
+              "name": "url",
+              "type": "uri",
+              "documentation": "The uri that identifies the structure definition"
+            },
+            {
+              "name": "version",
+              "type": "token",
+              "documentation": "The business version of the structure definition"
+            },
+            {
+              "name": "x-syndication-status",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            },
+            {
+              "name": "meta-delete",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-delete"
+            },
+            {
+              "name": "meta-add",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-add"
+            },
+            {
+              "name": "meta",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta"
+            },
+            {
+              "name": "diff",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+            }
+          ]
+        },
+        {
+          "type": "StructureMap",
+          "profile": "http://hl7.org/fhir/StructureDefinition/StructureMap",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+              "valueCanonical": "http://ontoserver.csiro.au/fhir/SubscriptionTopic/namingsystem|0.0.1"
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+              "valueCanonical": "http://ontoserver.csiro.au/fhir/SubscriptionTopic/codesystem|0.0.1"
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+              "valueCanonical": "http://ontoserver.csiro.au/fhir/SubscriptionTopic/structuredefinition|0.0.1"
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+              "valueCanonical": "http://ontoserver.csiro.au/fhir/SubscriptionTopic/valueset|0.0.1"
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+              "valueCanonical": "http://ontoserver.csiro.au/fhir/SubscriptionTopic/conceptmap|0.0.1"
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/capabilitystatement-subscriptiontopic-canonical",
+              "valueCanonical": "http://ontoserver.csiro.au/fhir/SubscriptionTopic/subscription|0.0.1"
+            }
+          ],
+          "type": "Subscription",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Subscription",
+          "supportedProfile": [
+            "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription"
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Substance",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Substance",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SubstanceNucleicAcid",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SubstanceNucleicAcid",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SubstancePolymer",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SubstancePolymer",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SubstanceProtein",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SubstanceProtein",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SubstanceReferenceInformation",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SubstanceSourceMaterial",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SubstanceSourceMaterial",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SubstanceSpecification",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SupplyDelivery",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SupplyDelivery",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "SupplyRequest",
+          "profile": "http://hl7.org/fhir/StructureDefinition/SupplyRequest",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "Task",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Task",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "TerminologyCapabilities",
+          "profile": "http://hl7.org/fhir/StructureDefinition/TerminologyCapabilities",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "TestReport",
+          "profile": "http://hl7.org/fhir/StructureDefinition/TestReport",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "TestScript",
+          "profile": "http://hl7.org/fhir/StructureDefinition/TestScript",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "ValueSet",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ValueSet",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "update",
+              "documentation": "The `ValueSet.url` cannot overlap with the URLs for the implicit ValueSets of SNOMED CT and LOINC."
+            },
+            {
+              "code": "vread"
+            },
+            {
+              "code": "read"
+            },
+            {
+              "code": "patch"
+            },
+            {
+              "code": "history-instance"
+            },
+            {
+              "code": "history-type"
+            },
+            {
+              "code": "delete"
+            },
+            {
+              "code": "create",
+              "documentation": "The `ValueSet.url` cannot overlap with the URLs for the implicit ValueSets of SNOMED CT and LOINC."
+            }
+          ],
+          "versioning": "versioned-update",
+          "readHistory": true,
+          "searchParam": [
+            {
+              "name": "_sort",
+              "type": "string"
+            },
+            {
+              "name": "_count",
+              "type": "number"
+            },
+            {
+              "name": "_id",
+              "type": "string",
+              "documentation": "The ID of the resource"
+            },
+            {
+              "name": "_lastUpdated",
+              "type": "date",
+              "documentation": "Only return resources which were last updated as specified by the given range"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "The security of the resource"
+            },
+            {
+              "name": "_tag",
+              "type": "token",
+              "documentation": "The tag of the resource"
+            },
+            {
+              "name": "context",
+              "type": "token",
+              "documentation": "A use context assigned to the value set"
+            },
+            {
+              "name": "context-type",
+              "type": "token",
+              "documentation": "A type of use context assigned to the value set"
+            },
+            {
+              "name": "context-type-value",
+              "type": "composite",
+              "documentation": "A use context type and value assigned to the value set"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The value set publication date"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "documentation": "The description of the value set"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "External identifier for the value set"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Computationally friendly name of the value set"
+            },
+            {
+              "name": "publisher",
+              "type": "string",
+              "documentation": "Name of the publisher of the value set"
+            },
+            {
+              "name": "reference",
+              "type": "uri",
+              "documentation": "A code system included or excluded in the value set or an imported value set"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "The current status of the value set"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "documentation": "The human-friendly name of the value set"
+            },
+            {
+              "name": "url",
+              "type": "uri",
+              "documentation": "The uri that identifies the value set"
+            },
+            {
+              "name": "version",
+              "type": "token",
+              "documentation": "The business version of the value set"
+            },
+            {
+              "name": "x-syndication-status",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "validate-code",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/CodeSystemValueSet-it-validate-code"
+            },
+            {
+              "name": "expand",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/ValueSet-it-expand"
+            },
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            },
+            {
+              "name": "meta-delete",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-delete"
+            },
+            {
+              "name": "meta-add",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta-add"
+            },
+            {
+              "name": "meta",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-i-meta"
+            },
+            {
+              "name": "diff",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+            }
+          ]
+        },
+        {
+          "type": "VerificationResult",
+          "profile": "http://hl7.org/fhir/StructureDefinition/VerificationResult",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        },
+        {
+          "type": "VisionPrescription",
+          "profile": "http://hl7.org/fhir/StructureDefinition/VisionPrescription",
+          "operation": [
+            {
+              "name": "validate",
+              "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-it-validate"
+            }
+          ]
+        }
+      ],
+      "interaction": [
+        {
+          "code": "batch"
+        }
+      ],
+      "operation": [
+        {
+          "name": "convert",
+          "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/-s-convert"
+        },
+        {
+          "name": "versions",
+          "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/-s-versions"
+        },
+        {
+          "name": "diff",
+          "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/Multi-is-diff"
+        },
+        {
+          "name": "closure",
+          "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/-s-closure"
+        },
+        {
+          "name": "x-load-package",
+          "definition": "https://nzhts.digital.health.nz/fhir/OperationDefinition/-s-x-load-package",
+          "documentation": "The Ontoserver-compatible contents of a FHIR Package posted to this endpoint will be loaded."
+        }
+      ]
+    }
+  ]
+}
