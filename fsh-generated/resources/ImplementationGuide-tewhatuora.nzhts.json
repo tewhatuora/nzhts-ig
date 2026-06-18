@@ -1,0 +1,100 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "tewhatuora.nzhts",
+  "url": "https://fhir-ig.digital.health.nz/nzhts/ImplementationGuide/tewhatuora.nzhts",
+  "version": "0.1.0",
+  "name": "nzhts",
+  "title": "New Zealand Health Terminology Service (NZHTS) Implementation Guide",
+  "status": "draft",
+  "publisher": "Health New Zealand | Te Whatu Ora",
+  "contact": [
+    {
+      "name": "Health New Zealand | Te Whatu Ora",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.tewhatuora.govt.nz/"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR Iimplementation Guide for the NZHTS generated from the NZHTS API",
+  "packageId": "tewhatuora.nzhts",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "CapabilityStatement/NZHTS-CapabilityStatement"
+        },
+        "description": "NZHTS instance of Ontoserver implementing the HL7 FHIR terminology server specification",
+        "exampleBoolean": false,
+        "name": "FHIR Conformance statement for OntoserverÂ®"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2024+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "no-narrative",
+        "value": "CodeSystem/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "ValueSet/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "ConceptMap/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "CodeSystem/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "ValueSet/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "ConceptMap/*"
+      },
+      {
+        "code": "no-check-usage",
+        "value": "CodeSystem/*"
+      },
+      {
+        "code": "no-check-usage",
+        "value": "ValueSet/*"
+      },
+      {
+        "code": "no-check-usage",
+        "value": "ConceptMap/*"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      }
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 {
   "resourceType": "CapabilityStatement",
-  "id": "e0b77a14-1798-4245-be29-c35efe9bc1a2",
+  "id": "NZHTS-CapabilityStatement",
   "text": {
     "status": "generated",
-    "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003EHAPI FHIR Server\u003C/div\u003E"
+    "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003ENew Zealand Health Terminology Service (NZHTS)\u003C/div\u003E"
   },
   "extension": [
     {
@@ -53,7 +53,7 @@
   "url": "https://nzhts.digital.health.nz/fhir/metadata",
   "version": "6.24.2.1781739358409",
   "name": "FHIR_Conformance_statement_for_Ontoserver",
-  "title": "FHIR Conformance statement for OntoserverÂ®",
+  "title": "FHIR Conformance statement for Ontoserver®",
   "status": "active",
   "experimental": false,
   "date": "2026-06-18T11:35:49.725+12:00",
