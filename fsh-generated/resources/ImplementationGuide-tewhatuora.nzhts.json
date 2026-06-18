@@ -14,11 +14,15 @@
         {
           "system": "url",
           "value": "https://www.tewhatuora.govt.nz/"
+        },
+        {
+          "system": "email",
+          "value": "standards@tewhatuora.govt.nz"
         }
       ]
     }
   ],
-  "description": "FHIR Iimplementation Guide for the NZHTS generated from the NZHTS API",
+  "description": "FHIR Implementation Guide for the New Zealand Health Terminology Service (NZHTS)",
   "packageId": "tewhatuora.nzhts",
   "fhirVersion": [
     "4.0.1"
@@ -31,7 +35,7 @@
         },
         "description": "NZHTS instance of Ontoserver implementing the HL7 FHIR terminology server specification",
         "exampleBoolean": false,
-        "name": "FHIR Conformance statement for OntoserverÂ®"
+        "name": "FHIR Conformance statement for Ontoserver®"
       }
     ],
     "page": {
