@@ -84,7 +84,7 @@ NZ edition SNOMED CT ValueSet Expansion via Tx-ecosystem/NZHTS
 ```mermaid
 sequenceDiagram
     autonumber
-    participant IG as IG source / package
+    participant IG as IG source
     participant Pub as FHIR IG Publisher<br/>WorkerContext / Tx Manager
     participant Cache as Local tx cache
     participant Reg as tx.fhir.org/tx-reg<br/>coordination service
