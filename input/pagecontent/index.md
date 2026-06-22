@@ -1,13 +1,30 @@
 
-## IG Testing
+## NZHTS
 
-<p class="dragon">Important note: This implementation guide is not for general use yet - it is being used to test the approach of creating a FHIR IG/Package for the NZHTS service.</p>
+The New Zealand Health Terminology Service (NZHTS) is the national terminology service run by Health New Zealand | Te Whatu Ora. It publishes and serves standard terminologies, code systems, value sets and concept maps through a FHIR R4 terminology server API, backed by an Ontoserver instance.
 
-## NZHTS Content 
+This guide is for FHIR implementers who need to use NZHTS content in profiles, implementation guides, validation workflows etc. It focuses on the FHIR usage patterns rather than the clinical governance of individual terminologies.
 
-This FHIR IG contains terminology artefacts from the [New Zealand Health Terminology service](https://www.tewhatuora.govt.nz/health-services-and-programmes/digital-health/terminology-service/) that are used in FHIR NZ FHIR implementation guides, so the terminology can be included as a package dependency in IGs that use NZHTS mastered terminology. 
+Use this guide to understand:
 
-The IG will be generated from a snapshot downloaded from the NZHTS FHIR API. The intention would be to release a new version of the IG/package with each NZHTS release (currently monthly).  
+* the FHIR terminology concepts that matter when using NZHTS
+* how to use NZHTS as part of the wider HL7 FHIR terminology ecosystem including with terminology for which NZHTS is declared as the authoratitive server
+* how to to use NZHTS authentication with the IG Publisher 
+
+The production FHIR endpoint is `https://nzhts.digital.health.nz/fhir`. The included [NZHTS CapabilityStatement](CapabilityStatement-NZHTS-CapabilityStatement.html) describes the server's supported functionality.
+
+## Guide pages
+
+* [FHIR Terminology primer for NZ FHIR](fhir-terminology-primer.html)
+* [NZHTS and the HL7 FHIR terminology ecosystem](tx-ecosystem.html)
+* [Using NZHTS with authentication and the IG Publisher](auth.html)
+
+## References
+
+* [Health New Zealand NZHTS overview](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/nz-health-terminology-service-nzhts)
+* [NZHTS API examples on GitHub](https://github.com/hiso-nz/nzhts/wiki)
+* [HNZ Digital Services Hub](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/digital-technologies/digital-services-hub)
+
 
 ## Version
 
