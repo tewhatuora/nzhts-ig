@@ -76,7 +76,8 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  All Artifacts: artifacts.html
+  Tx-ecosystem: Tx-ecosystem.html
+  NZHTS Auth: Auth.html
   NZHTS CapabilityStatement: CapabilityStatement-NZHTS-CapabilityStatement.html
 
 

@@ -47,6 +47,21 @@
           "nameUrl": "index.html",
           "title": "Home",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "auth.html",
+          "title": "Auth",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "fhir-terminology-primer.html",
+          "title": "Fhir Terminology Primer",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "tx-ecosystem.html",
+          "title": "Tx Ecosystem",
+          "generation": "markdown"
         }
       ]
     },
