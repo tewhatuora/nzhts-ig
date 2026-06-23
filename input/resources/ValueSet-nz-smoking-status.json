@@ -1,0 +1,71 @@
+{
+    "resourceType": "ValueSet",
+    "id": "nz-smoking-status",
+    "url": "https://example.org/fhir/ValueSet/nz-smoking-status",
+    "version": "0.1.0",
+    "name": "NZSmokingStatus",
+    "title": "New Zealand Smoking Status",
+    "status": "draft",
+    "experimental": true,
+    "date": "2026-06-24",
+    "publisher": "Example Organisation",
+    "description": "An extensional, version-pinned representation of the New Zealand smoking status reference set.",
+    "compose": {
+        "inactive": false,
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/21000210109/version/20260401",
+                "concept": [
+                    {
+                        "code": "77176002",
+                        "display": "Currently smoking"
+                    },
+                    {
+                        "code": "735128000",
+                        "display": "Ex-smoking for less than 1 year"
+                    },
+                    {
+                        "code": "48031000119106",
+                        "display": "Ex-smoking for more than 1 year"
+                    },
+                    {
+                        "code": "266919005",
+                        "display": "Never smoked"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "timestamp": "2026-06-24T00:00:00Z",
+        "total": 4,
+        "offset": 0,
+        "contains": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/21000210109/version/20260401",
+                "code": "77176002",
+                "display": "Currently smoking"
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/21000210109/version/20260401",
+                "code": "735128000",
+                "display": "Ex-smoking for less than 1 year"
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/21000210109/version/20260401",
+                "code": "48031000119106",
+                "display": "Ex-smoking for more than 1 year"
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/21000210109/version/20260401",
+                "code": "266919005",
+                "display": "Never smoked"
+            }
+        ]
+    }
+}

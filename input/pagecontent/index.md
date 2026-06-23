@@ -1,17 +1,18 @@
 
 ## NZHTS
 
-The New Zealand Health Terminology Service (NZHTS) is the national terminology service run by Health New Zealand \| Te Whatu Ora. It publishes and serves standard terminologies, code systems, value sets and concept maps through a FHIR R4 terminology server API, backed by an Ontoserver instance.
+The New Zealand Health Terminology Service (NZHTS) is the national health terminology service run by Health New Zealand \| Te Whatu Ora. It is an instance of Ontoserver, publishing and serving terminology as a FHIR R4 terminology service API. 
 
-This guide is for FHIR implementers who need to use NZHTS content in profiles, implementation guides, validation workflows etc. It focuses on the FHIR usage patterns rather than the clinical governance of individual terminologies.
+This IG provides guidance to NZHTS FHIR users. It focuses on the FHIR usage patterns and integration with FHIR tooling rather than the clinical governance of individual terminologies. For more general NZHTS information, see the [NZHTS home page](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/nz-health-terminology-service-nzhts).
 
-Use this guide to understand:
+This guide covers:
 
-* the FHIR terminology concepts that matter when using NZHTS
+* A primer for the FHIR terminology concepts that matter when using NZHTS
 * how to use NZHTS as part of the wider HL7 FHIR terminology ecosystem including with terminology for which NZHTS is declared as the authoratitive server
 * how to to use NZHTS authentication with the IG Publisher 
+* architecture guidance on consuming NZHTS and production terminology service usage
 
-The production FHIR endpoint is `https://nzhts.digital.health.nz/fhir`. The included [NZHTS CapabilityStatement](CapabilityStatement-NZHTS-CapabilityStatement.html) describes the server's supported functionality.
+The production FHIR terminology endpoint is `https://nzhts.digital.health.nz/fhir`. The included [NZHTS CapabilityStatement](CapabilityStatement-NZHTS-CapabilityStatement.html) describes the server's supported functionality. 
 
 ## Guide pages
 

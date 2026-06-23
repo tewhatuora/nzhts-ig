@@ -1,0 +1,42 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "sct-nz-smoking-status-fragment",
+    "url": "http://snomed.info/sct",
+    "version": "http://snomed.info/sct/21000210109/version/20260401",
+    "name": "SCTNZSmokingStatusFragment",
+    "title": "SNOMED CT NZ Edition Smoking Status Fragment",
+    "status": "draft",
+    "experimental": true,
+    "date": "2026-04-01",
+    "publisher": "Example Organisation",
+    "description": "A non-authoritative fragment of the SNOMED CT New Zealand Edition containing the concepts used by the New Zealand smoking status reference set. This resource exists to support local IG publication and validation; SNOMED CT NZ Edition remains the authoritative terminology source.",
+    "copyright": "This non-authoritative fragment contains SNOMED CT content. Use is subject to applicable SNOMED CT licensing terms.",
+    "caseSensitive": true,
+    "compositional": true,
+    "versionNeeded": false,
+    "content": "fragment",
+    "concept": [
+        {
+            "code": "77176002",
+            "display": "Currently smoking",
+            "definition": "A person whose lifetime tobacco use exceeds 100 cigarettes and who has smoked within the preceding 28 days."
+        },
+        {
+            "code": "735128000",
+            "display": "Ex-smoking for less than 1 year",
+            "definition": "A person whose lifetime tobacco use exceeds 100 cigarettes, who has not smoked within the preceding 28 days, and who stopped smoking less than 12 months ago."
+        },
+        {
+            "code": "48031000119106",
+            "display": "Ex-smoking for more than 1 year",
+            "definition": "A person whose lifetime tobacco use exceeds 100 cigarettes, who has not smoked within the preceding 28 days, and who stopped smoking 12 months ago or more."
+        },
+        {
+            "code": "266919005",
+            "display": "Never smoked",
+            "definition": "A person whose lifetime tobacco use does not exceed 100 cigarettes and who does not currently smoke."
+        }
+    ]
+}
+
+

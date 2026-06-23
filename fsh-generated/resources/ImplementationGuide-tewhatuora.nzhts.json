@@ -36,6 +36,29 @@
         "description": "NZHTS instance of Ontoserver implementing the HL7 FHIR terminology server specification",
         "exampleBoolean": false,
         "name": "FHIR Conformance statement for Ontoserver®"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/nz-smoking-status"
+        },
+        "description": "An extensional, version-pinned representation of the New Zealand smoking status reference set (SCTID 72741000210106).",
+        "exampleBoolean": false,
+        "name": "New Zealand Smoking Status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/smoking-status-example"
+        },
+        "exampleBoolean": false,
+        "name": "smoking-status-example"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/sct-nz-smoking-status-fragment"
+        },
+        "description": "A non-authoritative fragment of the SNOMED CT New Zealand Edition containing the concepts used by the New Zealand smoking status reference set. This resource exists to support local IG publication and validation; SNOMED CT NZ Edition remains the authoritative terminology source.",
+        "exampleBoolean": false,
+        "name": "SNOMED CT NZ Edition Smoking Status Fragment"
       }
     ],
     "page": {

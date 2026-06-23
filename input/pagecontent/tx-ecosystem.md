@@ -1,5 +1,46 @@
 ## NZHTS & the HL7 FHIR terminology ecosystem
 
+### Overview of Tx Ecosystem main components / actors
+
+```mermaid
+flowchart LR
+    IGSource["IG source"]
+    FHIRPackages["FHIR packages<br/>(local cache, registry, FHIR Core,<br/>THO, FHIR extensions,<br/>dependencies)"]
+
+    Publisher["IG Publisher /<br/>Validator"]
+
+    Coordinator["Co-ordination service<br/>(tx.fhir.org/tx-reg)"]
+    Registry["Terminology ecosystem<br/>registry (server registrations,<br/>authority declarations)"]
+
+    subgraph RegisteredServers["Registered terminology servers"]
+        direction TB
+
+        ServerGateway[" "]
+
+        SharedHL7["Shared HL7<br/>terminology server<br/>(tx.fhir.org/r4)"]
+
+        NZHTS["NZHTS<br/>(nzhts.digital.health.<br/>nz/fhir)"]
+
+        OtherServers["AU, CA, DE, EU, etc."]
+
+        ServerGateway ~~~ SharedHL7
+        SharedHL7 ~~~ NZHTS
+        NZHTS ~~~ OtherServers
+    end
+
+    IGSource -->|"Inputs"| Publisher
+    FHIRPackages --> Publisher
+
+    Publisher <-->|"Look up terminology server to use for each<br/>$expand, $validate-code, $lookup, etc."| Coordinator
+
+    Coordinator <--> Registry
+
+    Publisher <-->|"Terminology requests routed to the appropriate server<br/>($expand, $validate-code, $lookup)"| ServerGateway
+
+    style RegisteredServers fill:none,stroke:#333,stroke-width:2px,stroke-dasharray: 8 6
+    style ServerGateway fill:none,stroke:none,color:transparent
+```
+
 ### FHIR IG publisher terminology validation routing
 
 ```mermaid
