@@ -41,7 +41,7 @@
         "reference": {
           "reference": "ValueSet/nz-smoking-status"
         },
-        "description": "An extensional, version-pinned representation of the New Zealand smoking status reference set (SCTID 72741000210106).",
+        "description": "An extensional, version-pinned representation of the New Zealand smoking status reference set.",
         "exampleBoolean": false,
         "name": "New Zealand Smoking Status"
       },
