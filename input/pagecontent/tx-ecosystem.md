@@ -47,7 +47,7 @@ flowchart LR
 ---
 title: IG Publisher terminology validation  
 ---
-flowchart TD
+flowchart LR
   A["Need terminology decision<br/>system/valueSet/version"] --> B{"Already in<br/>tx cache?"}
   B -- yes --> C["Use cached Parameters<br/>or expansion"]
   B -- no --> D{"Can local/package<br/>artifacts answer safely?"}
@@ -65,14 +65,20 @@ flowchart TD
   K --> L
 
   L --> M{"Operation type"}
-  M --> N["ValueSet/$validate-code"]
-  M --> O["CodeSystem/$validate-code"]
-  M --> P["ValueSet/$expand"]
-  M --> Q["CodeSystem/$lookup"]
+
+  subgraph Ops[" "]
+    direction TB
+    M --> N["ValueSet/$validate-code"]
+    M --> O["CodeSystem/$validate-code"]
+    M --> P["ValueSet/$expand"]
+    M --> Q["CodeSystem/$lookup"]
+  end
+
   N --> R["Result, messages, display"]
   O --> R
   P --> S["Expansion or too-costly/error"]
   Q --> T["Display, version, properties"]
+
   R --> U["Cache result + emit QA issues"]
   S --> U
   T --> U

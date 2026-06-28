@@ -1,7 +1,7 @@
 
 ## NZHTS
 
-The New Zealand Health Terminology Service (NZHTS) is the national health terminology service run by Health New Zealand \| Te Whatu Ora. It is an instance of Ontoserver, publishing and serving terminology as a FHIR R4 terminology service API. 
+The New Zealand Health Terminology Service (NZHTS) is the national health terminology service run by Health New Zealand \| Te Whatu Ora. It is an instance of Ontoserver, publishing and serving terminology as an FHIR R4 terminology service API. 
 
 This IG provides guidance to NZHTS FHIR users. It focuses on the FHIR usage patterns and integration with FHIR tooling rather than the clinical governance of individual terminologies. For more general NZHTS information, see the [NZHTS home page](https://www.healthnz.govt.nz/health-professionals/guidance-standards/topic/data-and-standards/health-information-standards/nz-health-terminology-service-nzhts).
 
