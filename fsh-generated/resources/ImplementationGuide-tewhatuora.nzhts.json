@@ -101,8 +101,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "fhir-terminology-primer.html",
-          "title": "Fhir Terminology Primer",
+          "nameUrl": "nz-snomed.html",
+          "title": "Nz Snomed",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "nzhts-usage.html",
+          "title": "Nzhts Usage",
           "generation": "markdown"
         },
         {

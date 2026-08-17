@@ -2,7 +2,6 @@
 
 In the HL7 terminology ecosystem, the IG publisher and validation tooling uses a terminology coordination service (an API exposed at `http://tx.fhir.org/tx-reg`) to decide which terminology server is appropriate to use for a given terminology resource (CodeSystem, ValueSet and so on). NZHTS has been registered to participate in this ecosystem to make available content relevant/specific to New Zealand users. NZHTS is registered as the authoritative server for the SNOMED NZ edition, and others may be added in the future (e.g. NZMT). The full details of how this process of terminology validation is routed and managed by the IG publisher are described in the [FHIR terminology ecosystem page](/Tx-ecosystem.html)
 
-
 Because some of the content in NZHTS is licensed, access to the licensed content is available only to registered users and requires a bearer token to be provided in requests from the IG publisher. This page provides guidance on how this can be configured. 
 
 ### NZHTS as an authoritative endpoint

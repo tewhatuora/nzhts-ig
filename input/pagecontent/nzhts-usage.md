@@ -1,0 +1,1 @@
+## NZHTS deployment pattern usage
