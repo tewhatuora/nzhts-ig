@@ -16,7 +16,7 @@ These are human, authoring, build-time or content-distribution activities. They 
 
 ### Do not make NZHTS a clinical runtime dependency
 
-Clinical applications should not call NZHTS synchronously for routine user-facing or clinical workflows such as type-ahead search, code lookup, code validation or ValueSet expansion. The presence of a FHIR operation on the national endpoint does not imply that NZHTS is designed to meet an application's runtime latency, throughput, availability or support requirements. A direct dependency would also expose clinical workflows to internet connectivity, authentication and national-service maintenance events.
+Clinical applications should not call NZHTS synchronously for routine user-facing or clinical workflows such as type-ahead search, code lookup, code validation or ValueSet expansion. NZHTS is not designed to meet an application's runtime latency, throughput, availability or support requirements. A direct dependency would also expose clinical workflows to internet connectivity, authentication and national-service maintenance events.
 
 Direct access by the IG Publisher and other design-time tools is appropriate; direct access on every clinical transaction is not.
 
