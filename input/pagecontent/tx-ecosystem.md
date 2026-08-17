@@ -1,12 +1,12 @@
 ## NZHTS & the HL7 FHIR terminology ecosystem
 
-NZHTS is a registered participant in the HL7 FHIR terminology ecosystem, and can be declared as the authoritative server for terminology artifacts used in NZ such as the NZ edition of SNOMED CT. That declaration allows the IG publisher to resolve NZ terminology against NZHTS automatically.
+NZHTS is a registered participant in the HL7 FHIR terminology ecosystem, and has been declared as the authoritative server for terminology artifacts used in NZ such as the NZ edition of SNOMED CT. That declaration allows the IG publisher to resolve NZ terminology against NZHTS automatically.
 
-This page describes how that works: the actors involved, how the IG Publisher decides which terminology server to call, and what happens end to end during a build.
+This page provides background on how the terminology ecosystem works: the actors involved, how the IG Publisher decides which terminology server to call, and what happens end to end during a build. It is not strictly necessary to understand how the terminology co-ordination service and registry work in detail, but it is helpful when building IGs to understand at a high level where terminology is being sourced, validated, and expanded from. The full documentation is available in the [Github terminology server registry docs](https://github.com/FHIR/ig-registry/blob/master/tx-registry-doco.md) and accompanying [FHIR IG](https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/ecosystem.html). 
 
 ### Overview of Tx Ecosystem main components / actors
 
-The Publisher consults the co-ordination service for information about terminology artifacts included in an IG and then calls the appropriate registered servers to `$validate/$expand/$lookup` as required. NZHTS is one of those registered servers, reached through the registry. The diagram below shows the various componenents and how they relate to each other.
+The Publisher consults a co-ordination service for information about terminology artifacts included in an IG and then calls the appropriate registered servers to `$validate/$expand/$lookup` as required. NZHTS is one of those registered servers, reached through the registry. The diagram below shows the various componenents and how they relate to each other.
 
 ```mermaid
 flowchart LR
