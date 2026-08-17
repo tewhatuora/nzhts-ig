@@ -12,7 +12,7 @@ This guide covers:
 * Guidance on using the [NZ Edition of SNOMED in FHIR IGs](nz-snomed.html). 
 * architectural guidance on expected [NZHTS usage patterns](nzhts-usage.html).
 
-The production FHIR terminology endpoint is `https://nzhts.digital.health.nz/fhir`. The included [NZHTS CapabilityStatement](CapabilityStatement-NZHTS-CapabilityStatement.html) describes the server's supported functionality. This can also be retreived directly from `https://nzhts.digital.health.nz/fhir/metadata`
+The production FHIR terminology endpoint is `https://nzhts.digital.health.nz/fhir`. The included [NZHTS CapabilityStatement](CapabilityStatement-NZHTS-CapabilityStatement.html) describes the server's supported functionality. This can also be retreived directly from [https://nzhts.digital.health.nz/fhir/metadata](https://nzhts.digital.health.nz/fhir/metadata)
 
 ## References
 
