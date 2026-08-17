@@ -78,10 +78,11 @@ menu:
   Home: index.html
   Tx-Ecosystem: tx-ecosystem.html
   NZHTS Auth: auth.html
-  SNOMED NZ ed.: nz-snomed.html
-  NZHTS Integration Patterns: nzhts-usage.html 
+  SNOMED NZ edition: nz-snomed.html
+  NZHTS Integration Patterns: nzhts-usage.html
+  Example artifacts: artifacts.html 
   NZHTS CapabilityStatement: CapabilityStatement-NZHTS-CapabilityStatement.html
-  Example artifacts: artifacts.html
+  
 
 
 

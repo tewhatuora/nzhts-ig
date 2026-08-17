@@ -20,15 +20,15 @@
     <a href="auth.html">NZHTS Auth</a>
   </li>
   <li>
-    <a href="nz-snomed.html">SNOMED NZ ed.</a>
+    <a href="nz-snomed.html">SNOMED NZ edition</a>
   </li>
   <li>
     <a href="nzhts-usage.html">NZHTS Integration Patterns</a>
   </li>
   <li>
-    <a href="CapabilityStatement-NZHTS-CapabilityStatement.html">NZHTS CapabilityStatement</a>
+    <a href="artifacts.html">Example artifacts</a>
   </li>
   <li>
-    <a href="artifacts.html">Example artifacts</a>
+    <a href="CapabilityStatement-NZHTS-CapabilityStatement.html">NZHTS CapabilityStatement</a>
   </li>
 </ul>
