@@ -1,0 +1,41 @@
+{
+  "resourceType": "Observation",
+  "id": "smoking-status-example",
+  "status": "final",
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "patient",
+      "meta": {
+        "profile": [
+          "http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
+        ]
+      },
+      "identifier": [
+        {
+          "use": "official",
+          "system": "https://standards.digital.health.nz/ns/nhi-id",
+          "value": "ZZZ0039"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "Smoking status"
+  },
+  "subject": {
+    "reference": "#patient"
+  },
+  "effectiveDateTime": "2026-06-24",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/21000210109/version/20260401",
+        "code": "77176002",
+        "display": "Currently smoking"
+      }
+    ]
+  }
+}
+

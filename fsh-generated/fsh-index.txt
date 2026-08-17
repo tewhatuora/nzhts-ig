@@ -1,1 +1,4 @@
-Output File  Name  Type  FSH File  Lines
+Output File                                              Name                                 Type      FSH File      Lines
+Immunization-covid-immunisation-example.json             covid-immunisation-example           Instance  examples.fsh  38 - 59
+Observation-immunisation-reaction-event-example.json     immunisation-reaction-event-example  Instance  examples.fsh  1 - 35
+StructureDefinition-nz-immunisation-reaction-event.json  NzImmunisationReactionEvent          Profile   profiles.fsh  1 - 76

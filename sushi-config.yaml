@@ -4,21 +4,21 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: tewhatuora.nzhts
-canonical: fhir-ig.digital.health.nz/nzhts
+canonical: https://fhir-ig.digital.health.nz/nzhts
 name: nzhts
 title: New Zealand Health Terminology Service (NZHTS) Implementation Guide
-description: FHIR Iimplementation Guide for the NZHTS generated from the NZHTS API
-status: draft # draft | active | retired | unknown
-version: 0.1.0
+description: FHIR Implementation Guide for the New Zealand Health Terminology Service (NZHTS)
+status: active # draft | active | retired | unknown
+version: 0.9.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2024+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+copyrightYear: 2026+
+releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: Health New Zealand | Te Whatu Ora
   url: https://www.tewhatuora.govt.nz/
-  # email: test@example.org
+  email: standards@tewhatuora.govt.nz
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -76,9 +76,15 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  CodeSystems: artifacts.html#terminology-code-systems
-  ValueSets: artifacts.html#terminology-value-sets
-  All Artefacts: artifacts.html
+  Tx-Ecosystem: tx-ecosystem.html
+  NZHTS Auth: Authentication.html
+  SNOMED NZ edition: nz-snomed.html
+  NZHTS Integration Patterns: nzhts-usage.html
+  Example artifacts: artifacts.html 
+  NZHTS CapabilityStatement: CapabilityStatement-NZHTS-CapabilityStatement.html
+  
+
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -222,3 +228,5 @@ parameters:
     - CodeSystem/*
     - ValueSet/*
     - ConceptMap/*
+  apply-version: false
+  

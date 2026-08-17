@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "immunisation-reaction-event-example",
+  "meta": {
+    "profile": [
+      "https://fhir-ig.digital.health.nz/nzhts/StructureDefinition/nz-immunisation-reaction-event"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "patient",
+      "meta": {
+        "profile": [
+          "http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
+        ]
+      },
+      "identifier": [
+        {
+          "use": "official",
+          "system": "https://standards.digital.health.nz/ns/nhi-id",
+          "value": "ZZZ0039"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/21000210109",
+        "code": "50920009",
+        "display": "Myocarditis"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "#patient"
+  },
+  "effectiveDateTime": "2026-07-02"
+}

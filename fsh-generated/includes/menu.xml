@@ -14,12 +14,21 @@
     <a href="index.html">Home</a>
   </li>
   <li>
-    <a href="artifacts.html#terminology-code-systems">CodeSystems</a>
+    <a href="tx-ecosystem.html">Tx-Ecosystem</a>
   </li>
   <li>
-    <a href="artifacts.html#terminology-value-sets">ValueSets</a>
+    <a href="Authentication.html">NZHTS Auth</a>
   </li>
   <li>
-    <a href="artifacts.html">All Artefacts</a>
+    <a href="nz-snomed.html">SNOMED NZ edition</a>
+  </li>
+  <li>
+    <a href="nzhts-usage.html">NZHTS Integration Patterns</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Example artifacts</a>
+  </li>
+  <li>
+    <a href="CapabilityStatement-NZHTS-CapabilityStatement.html">NZHTS CapabilityStatement</a>
   </li>
 </ul>

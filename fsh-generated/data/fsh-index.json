@@ -1,0 +1,26 @@
+[
+  {
+    "outputFile": "Immunization-covid-immunisation-example.json",
+    "fshName": "covid-immunisation-example",
+    "fshType": "Instance",
+    "fshFile": "examples.fsh",
+    "startLine": 38,
+    "endLine": 59
+  },
+  {
+    "outputFile": "Observation-immunisation-reaction-event-example.json",
+    "fshName": "immunisation-reaction-event-example",
+    "fshType": "Instance",
+    "fshFile": "examples.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
+    "outputFile": "StructureDefinition-nz-immunisation-reaction-event.json",
+    "fshName": "NzImmunisationReactionEvent",
+    "fshType": "Profile",
+    "fshFile": "profiles.fsh",
+    "startLine": 1,
+    "endLine": 76
+  }
+]

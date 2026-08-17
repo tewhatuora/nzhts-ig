@@ -1,0 +1,41 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "nz-immunisation-reaction-event",
+  "url": "https://fhir-ig.digital.health.nz/nzhts/StructureDefinition/nz-immunisation-reaction-event",
+  "name": "NzImmunisationReactionEvent",
+  "title": "New Zealand Immunisation Reaction Event",
+  "status": "draft",
+  "description": "An Observation recording an adverse reaction event following a COVID-19 immunisation, where the\nreaction is coded from a reference set that exists only in the SNOMED CT **New Zealand edition**.\n\nThe profile adds one meaningful constraint: a **required binding** of `Observation.code` to a SNOMED\nCT [implicit ValueSet](http://hl7.org/fhir/R4/snomedct.html#implicit) - the members of the *New\nZealand COVID-19 adverse reaction event from immunisation reference set*. There is no locally\ndefined ValueSet resource; the binding points straight at the implicit URL:\n\n    http://snomed.info/sct/21000210109?fhir_vs=refset/61231000210108\n\nReading that URL left to right:\n\n* `http://snomed.info/sct` - the SNOMED CT code system. This is unchanged whatever edition is in\n  play; there is no separate \"NZ SNOMED\" code system URI. The edition is named in `Coding.version`\n  (see *Naming the edition in instances* below), not in `Coding.system`.\n* `/21000210109` - the **module id of the SNOMED CT New Zealand edition**. This is what scopes\n  resolution to NZ edition content, and it is the reason the URL resolves at all: the reference set\n  is NZ edition content and is not present in the international edition.\n* `?fhir_vs=refset/61231000210108` - expand to the members of this reference set.\n\nA terminology server holding the NZ edition (such as NZHTS) expands this URL directly, so the\nreference set does not have to be copied into this IG as an extensional ValueSet - contrast\n[NZSmokingStatus](ValueSet-nz-smoking-status.html), which enumerates its concepts and must be\nmaintained by hand as the underlying content changes.\n\nThe binding is what makes the reference set *enforceable*: a validator configured against a server\nholding the NZ edition will expand the implicit URL and reject any code that is not a member.\n\n### Naming the edition in instances\n\nConforming instances must set `Coding.version` to the SNOMED CT NZ **edition URI**:\n\n    http://snomed.info/sct/21000210109\n\nThis is not decoration. It is what lets a validator - or any consumer - determine *which terminology\nserver can answer questions about the code*. The\n[terminology server registry](https://github.com/FHIR/ig-registry/blob/master/hl7-nz-tx-servers.json)\ndeclares NZHTS authoritative for the pattern:\n\n    http://snomed.info/sct|http://snomed.info/sct/21000210109*\n\nwhich matches on system **and version**. A coding that gives only `system = http://snomed.info/sct`\nis unqualified SNOMED CT: it will be routed to a general-purpose terminology server, which does not\nhold the NZ edition, cannot expand this reference set, and will fail to validate the code. Omitting\nthe version is the single most common reason NZ edition content fails validation in an IG build.\n\n### Version pinning\n\nBoth the implicit ValueSet URL above and `Coding.version` use the bare edition URI, with no release\nappended, meaning \"the current release of the NZ edition\". Reference set membership therefore shifts\nas the edition is updated. Where a reproducible expansion is needed - a published conformance test,\nor a frozen release of a downstream IG - either may be pinned to a specific release:\n\n    http://snomed.info/sct/21000210109/version/20260401?fhir_vs=refset/61231000210108\n    http://snomed.info/sct/21000210109/version/20260401\n\nPinning trades currency for reproducibility: a pinned URI stops resolving once that release is no\nlonger served. This profile and its examples use the unpinned edition URI so that they track the\ncurrent NZ edition.\n\n### Use in context\n\nIn R4 an immunisation reaction is referenced from\n[`Immunization.reaction.detail`](http://hl7.org/fhir/R4/immunization-definitions.html#Immunization.reaction.detail),\na `Reference(Observation)`. See [ImmunisationReactionEventExample](Observation-immunisation-reaction-event-example.html)\nand the [Immunization](Immunization-covid-immunisation-example.html) that refers to it.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "The adverse reaction event, from the NZ COVID-19 immunisation reaction refset",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://snomed.info/sct/21000210109?fhir_vs=refset/61231000210108"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

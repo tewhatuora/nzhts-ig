@@ -1,0 +1,158 @@
+## NZHTS & the HL7 FHIR terminology ecosystem
+
+NZHTS is a registered participant in the HL7 FHIR terminology ecosystem, and has been declared as the authoritative server for terminology artifacts used in NZ such as the NZ edition of SNOMED CT. That declaration allows the IG publisher to resolve NZ terminology against NZHTS automatically.
+
+This page provides background on how the terminology ecosystem works: the actors involved, how the IG Publisher decides which terminology server to call, and what happens end to end during a build. It is not strictly necessary to understand how the terminology co-ordination service and registry work in detail, but it is helpful when building IGs to understand at a high level where terminology is being sourced, validated, and expanded from. The full documentation is available in the [Github terminology server registry docs](https://github.com/FHIR/ig-registry/blob/master/tx-registry-doco.md) and accompanying [FHIR IG](https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/ecosystem.html). 
+
+### Overview of Tx Ecosystem main components / actors
+
+The Publisher consults a co-ordination service for information about terminology artifacts included in an IG and then calls the appropriate registered servers to `$validate/$expand/$lookup` as required. NZHTS is one of those registered servers, reached through the registry. The diagram below shows the various componenents and how they relate to each other.
+
+```mermaid
+flowchart LR
+    IGSource["IG source"]
+    FHIRPackages["FHIR packages<br/>(local cache, registry, FHIR Core,<br/>THO, FHIR extensions,<br/>dependencies)"]
+
+    Publisher["IG Publisher /<br/>Validator"]
+
+    Coordinator["Co-ordination service<br/>(tx.fhir.org/tx-reg)"]
+    Registry["Terminology ecosystem<br/>registry (server registrations,<br/>authority declarations)"]
+
+    subgraph RegisteredServers["Registered terminology servers"]
+        direction TB
+
+        ServerGateway[" "]
+
+        SharedHL7["Shared HL7<br/>terminology server<br/>(tx.fhir.org/r4)"]
+
+        NZHTS["NZHTS<br/>(nzhts.digital.health.<br/>nz/fhir)"]
+
+        OtherServers["AU, CA, DE, EU, etc."]
+
+        ServerGateway ~~~ SharedHL7
+        SharedHL7 ~~~ NZHTS
+        NZHTS ~~~ OtherServers
+    end
+
+    IGSource -->|"Inputs"| Publisher
+    FHIRPackages --> Publisher
+
+    Publisher <-->|"Look up terminology server to use for each<br/>$expand, $validate-code, $lookup, etc."| Coordinator
+
+    Coordinator <--> Registry
+
+    Publisher <-->|"Terminology requests routed to the appropriate server<br/>($expand, $validate-code, $lookup)"| ServerGateway
+
+    style RegisteredServers fill:none,stroke:#333,stroke-width:2px,stroke-dasharray: 8 6
+    style ServerGateway fill:none,stroke:none,color:transparent
+```
+
+* **IG source and FHIR packages** are the inputs to a build: profiles, value sets and examples, plus the core FHIR, THO and dependency packages resolved from the local package cache or the package registry.
+* **The IG Publisher / Validator** is the client. It needs to make terminology decisions (is this code valid? what does it display as? what is in this value set?).
+* **The co-ordination service** (`tx.fhir.org/tx-reg`) is the directory/lookup service. Given a code system or value set URL and a FHIR version, it answers the question *"which server should I ask?"*
+* **The terminology ecosystem registry** holds info on which servers exist, what they support, and which of them have declared authority over particular terminologies.
+* **The registered terminology servers** respond to the actual terminology service queries. These include the shared HL7 server (`tx.fhir.org/r4`), NZHTS, and the equivalent national and regional servers for AU, CA, DE, the EU and others.
+
+### FHIR IG publisher terminology validation routing
+
+Whenever the Publisher hits coded content it needs to make a decision about, it works through the sequence below. Calling a terminology server is the last resort; the Publisher tries progressively more expensive options in order:
+
+1. **Local tx cache.** If the same question has been answered before, the cached result is reused. This is why a warm cache makes builds dramatically faster, and why clearing the cache forces a full round of server calls.
+2. **Local and package artifacts.** If the code system is small, complete and present in the build (a local code system, or one supplied by a dependency package), the Publisher can answer safely without any server at all.
+3. **Ask the co-ordination service.** Otherwise the Publisher calls `tx-reg` with the FHIR version, the code system or value set URL, and `usage=publication`, asking which server to use.
+
+The response then determines routing. If a server has declared authority for that terminology, its endpoint is used — this is the path NZ SNOMED CT and NZ code systems take to NZHTS. If there is no authoritative server but there are candidates, one is chosen, typically the primary `tx.fhir.org`. If neither is returned, the Publisher falls back to whatever primary tx server the build was configured with, or reports the terminology as unresolved.
+
+Once an endpoint is selected, the actual FHIR operation is issued: `ValueSet/$validate-code`, `CodeSystem/$validate-code`, `ValueSet/$expand` or `CodeSystem/$lookup` and the result is cached and turned into QA output. Note that `$expand` can return a "too costly" response rather than an expansion for a large or open-ended value set.
+
+```mermaid
+---
+title: IG Publisher terminology validation  
+---
+flowchart LR
+  A["Need terminology decision<br/>system/valueSet/version"] --> B{"Already in<br/>tx cache?"}
+  B -- yes --> C["Use cached Parameters<br/>or expansion"]
+  B -- no --> D{"Can local/package<br/>artifacts answer safely?"}
+  D -- yes --> E["Validate locally<br/>or use local expansion"]
+  D -- no --> F["Ask tx-reg<br/>resolve(fhirVersion, url/valueSet, usage=publication)"]
+
+  F --> G{"Authoritative<br/>server returned?"}
+  G -- yes --> H["Use authoritative endpoint"]
+  G -- no --> I{"Candidate servers<br/>returned?"}
+  I -- yes --> J["Choose candidate<br/>often primary tx.fhir.org"]
+  I -- no --> K["Use configured primary tx server<br/>or report unresolved terminology"]
+
+  H --> L["Call FHIR terminology operation"]
+  J --> L
+  K --> L
+
+  L --> M{"Operation type"}
+
+  subgraph Ops[" "]
+    direction TB
+    M --> N["ValueSet/$validate-code"]
+    M --> O["CodeSystem/$validate-code"]
+    M --> P["ValueSet/$expand"]
+    M --> Q["CodeSystem/$lookup"]
+  end
+
+  N --> R["Result, messages, display"]
+  O --> R
+  P --> S["Expansion or too-costly/error"]
+  Q --> T["Display, version, properties"]
+
+  R --> U["Cache result + emit QA issues"]
+  S --> U
+  T --> U
+```
+
+### End to end terminology flow for an IG build
+
+The sequence diagram below shows the decision logic for terminology resolution and validation in the context of a complete build.
+
+The build starts with package loading and the structural work — snapshot generation, narratives, indexes and profile validation. Terminology resolution then runs as a loop over every piece of bound coded content, applying the cache / local / registry sequence described above. A single IG can generate a very large number of these checks, which is why cache behaviour has such a visible effect on build times.
+
+Each terminology response is converted into errors, warnings or informational messages, and surfaced in three QA artefacts worth knowing about:
+
+* **`qa.html`** — the overall build QA report, including terminology-derived errors and warnings alongside everything else.
+* **`qa-tx.html`** — the terminology-specific report. This is the file to open when you are debugging why a code will not validate or a value set will not expand.
+* **`qa-txservers.html`** — a summary of which terminology servers were actually contacted during the build. For an NZ IG, this is the quickest way to confirm that NZ content genuinely resolved to NZHTS rather than silently falling back to the primary server.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant Author as IG author / CI
+  participant Pub as IG Publisher
+  participant Pkg as FHIR package cache / package registry
+  participant TxReg as tx.fhir.org/tx-reg
+  participant Tx as tx.fhir.org primary endpoint
+  participant Other as Authoritative/candidate ecosystem server
+  participant QA as QA outputs
+
+  Author->>Pub: Run _genonce / CI build<br/>-ig ig.json -tx tx.fhir.org
+  Pub->>Pkg: Load core + dependency packages
+  Pkg-->>Pub: StructureDefinitions, ValueSets, CodeSystems, etc.
+  Pub->>Pub: Generate snapshots, narratives, indexes
+  Pub->>Pub: Validate profiles and resources
+
+  loop For bound coded content / ValueSets
+    Pub->>Pub: Check local tx cache
+    alt Cache miss and local artifacts insufficient
+      Pub->>TxReg: Resolve CodeSystem/ValueSet<br/>FHIR version + usage=publication
+      TxReg-->>Pub: authoritative/candidate server choices
+      alt Authoritative/candidate selected
+        Pub->>Other: $validate-code / $expand / $lookup
+        Other-->>Pub: Parameters / ValueSet / OperationOutcome
+      else Use primary
+        Pub->>Tx: $validate-code / $expand / $lookup
+        Tx-->>Pub: Parameters / ValueSet / OperationOutcome
+      end
+      Pub->>Pub: Cache response
+    end
+    Pub->>Pub: Convert tx result into errors/warnings/info
+  end
+
+  Pub->>QA: Generate qa.html
+  Pub->>QA: Generate qa-tx.html
+  Pub->>QA: Generate qa-txservers.html
+```

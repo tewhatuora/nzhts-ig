@@ -1,0 +1,45 @@
+{
+  "resourceType": "Immunization",
+  "id": "covid-immunisation-example",
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "patient",
+      "meta": {
+        "profile": [
+          "http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
+        ]
+      },
+      "identifier": [
+        {
+          "use": "official",
+          "system": "https://standards.digital.health.nz/ns/nhi-id",
+          "value": "ZZZ0039"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/21000210109",
+        "code": "1119349007",
+        "display": "COVID-19 vaccine"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "#patient"
+  },
+  "occurrenceDateTime": "2026-07-01",
+  "reaction": [
+    {
+      "date": "2026-07-02",
+      "detail": {
+        "reference": "Observation/immunisation-reaction-event-example"
+      }
+    }
+  ]
+}
