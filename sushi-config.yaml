@@ -77,7 +77,7 @@ publisher:
 menu:
   Home: index.html
   Tx-Ecosystem: tx-ecosystem.html
-  NZHTS Auth: auth.html
+  NZHTS Auth: Authentication.html
   SNOMED NZ edition: nz-snomed.html
   NZHTS Integration Patterns: nzhts-usage.html
   Example artifacts: artifacts.html 

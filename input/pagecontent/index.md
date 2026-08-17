@@ -8,7 +8,7 @@ This IG provides guidance to NZHTS FHIR users. It focuses only on the FHIR usage
 This guide covers:
 
 * How to use NZHTS as part of the wider HL7 FHIR terminology ecosystem including with terminology for which NZHTS is declared as the authoratitive server. See the [Tx-ecosystem page](tx-ecosystem.html). 
-* How to to use [authentication with the IG Publisher](auth.html) to access licenced content on NZHTS (incl. NZ edition SNOMED CT). 
+* How to to use [authentication with the IG Publisher](Authentication.html) to access licenced content on NZHTS (incl. NZ edition SNOMED CT). 
 * Guidance on using the [NZ Edition of SNOMED in FHIR IGs](nz-snomed.html). 
 * architectural guidance on expected [NZHTS usage patterns](nzhts-usage.html).
 

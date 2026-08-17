@@ -7,7 +7,7 @@ NZHTS is the national service for mastering, authoring and distributing authorit
 NZHTS is currently intended to be used for:
 
 * authoring and maintaining nationally managed terminology artifacts;
-* discovering code systems, value sets, concept maps and updates to these;
+* discovering CodeSystems, ValueSets, ConceptMaps, NamingSystems etc. and updates to these terminology artifacts;
 * sourcing authoritative reference material for implementation, testing or distribution;
 * design-time terminology operations, including validating and expanding terminology during a [FHIR IG publication workflow](tx-ecosystem.html); and
 * obtaining versioned terminology content through the [NZHTS syndication feed](https://nzhts.digital.health.nz/synd/syndication.xml) for loading into downstream terminology services.
