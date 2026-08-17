@@ -1,18 +1,18 @@
 ## NZHTS integration pattern usage
 
-NZHTS is the national service for mastering, authoring and distributing authoritative health terminology. It is the source from which terminology is discovered and obtained; it is not intended to be the shared runtime terminology backend for New Zealand's clinical applications.
+NZHTS is the national service for mastering, authoring and distributing authoritative health terminology. It is the source from which terminology is discovered and obtained; it is not intended to be a shared runtime terminology backend for New Zealand's clinical applications.
 
 ### Appropriate uses of NZHTS
 
-Use NZHTS for:
+NZHTS is currently intended to be used for:
 
 * authoring and maintaining nationally managed terminology artifacts;
-* discovering code systems, value sets, concept maps and available releases;
+* discovering code systems, value sets, concept maps and updates to these;
 * sourcing authoritative reference material for implementation, testing or distribution;
 * design-time terminology operations, including validating and expanding terminology during a [FHIR IG publication workflow](tx-ecosystem.html); and
 * obtaining versioned terminology content through the [NZHTS syndication feed](https://nzhts.digital.health.nz/synd/syndication.xml) for loading into downstream terminology services.
 
-These are human, authoring, build-time or content-distribution activities. They are normally tolerant of network access, authentication and the operational characteristics of a shared national service.
+These are human-in-the-loop, authoring, build-time or content-distribution activities. They are normally tolerant of network access, authentication and the operational characteristics of a shared national service.
 
 ### Do not make NZHTS a clinical runtime dependency
 

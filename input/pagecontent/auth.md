@@ -70,7 +70,6 @@ For NZHTS-backed terminology, check:
 * whether the canonical URL resolves to NZHTS through the coordination server
 * whether the coordination response marks the NZHTS endpoint as requiring authentication
 * whether the local publisher/validator environment has credentials for that endpoint
-* whether the credentials cover the operations needed by the build, such as `$expand` and `$validate-code`
 * whether the settings file is in the default location or has been supplied with `-fhir-settings`
 * whether the build is accidentally running with `-tx n/a`, which disables live terminology server use
 

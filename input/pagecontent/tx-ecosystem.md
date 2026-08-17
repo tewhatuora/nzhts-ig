@@ -6,15 +6,7 @@ This page describes how that works: the actors involved, how the IG Publisher de
 
 ### Overview of Tx Ecosystem main components / actors
 
-The diagram below shows the moving parts and how they relate to each other.
-
-* **IG source and FHIR packages** are the inputs to a build — your own profiles, value sets and examples, plus the core FHIR, THO and dependency packages resolved from the local package cache or the package registry.
-* **The IG Publisher / Validator** is the client. It needs to make terminology decisions (is this code valid? what does it display as? what is in this value set?).
-* **The co-ordination service** (`tx.fhir.org/tx-reg`) is the directory/lookup service. Given a code system or value set URL and a FHIR version, it answers the question *"which server should I ask?"*
-* **The terminology ecosystem registry** holds the underlying data — which servers exist, what they support, and which of them have declared authority over particular terminologies.
-* **The registered terminology servers** respond to the actual terminology service queries. These include the shared HL7 server (`tx.fhir.org/r4`), NZHTS, and the equivalent national and regional servers for AU, CA, DE, the EU and others.
-
-The important consequence is that the Publisher talks to the co-ordination service *about* terminology, and to the registered servers *for* terminology. NZHTS sits in the second group, and is reached because the registry points to it.
+The Publisher consults the co-ordination service for information about terminology artifacts included in an IG and then calls the appropriate registered servers to `$validate/$expand/$lookup` as required. NZHTS is one of those registered servers, reached through the registry. The diagram below shows the various componenents and how they relate to each other.
 
 ```mermaid
 flowchart LR
@@ -54,6 +46,12 @@ flowchart LR
     style RegisteredServers fill:none,stroke:#333,stroke-width:2px,stroke-dasharray: 8 6
     style ServerGateway fill:none,stroke:none,color:transparent
 ```
+
+* **IG source and FHIR packages** are the inputs to a build: profiles, value sets and examples, plus the core FHIR, THO and dependency packages resolved from the local package cache or the package registry.
+* **The IG Publisher / Validator** is the client. It needs to make terminology decisions (is this code valid? what does it display as? what is in this value set?).
+* **The co-ordination service** (`tx.fhir.org/tx-reg`) is the directory/lookup service. Given a code system or value set URL and a FHIR version, it answers the question *"which server should I ask?"*
+* **The terminology ecosystem registry** holds info on which servers exist, what they support, and which of them have declared authority over particular terminologies.
+* **The registered terminology servers** respond to the actual terminology service queries. These include the shared HL7 server (`tx.fhir.org/r4`), NZHTS, and the equivalent national and regional servers for AU, CA, DE, the EU and others.
 
 ### FHIR IG publisher terminology validation routing
 
