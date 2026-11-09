@@ -14,11 +14,11 @@ NZHTS is currently intended to be used for:
 
 These are human-in-the-loop, authoring, build-time or content-distribution activities. They are normally tolerant of network access, authentication and the operational characteristics of a shared national service.
 
-### Do not make NZHTS a clinical runtime dependency
+### NZHTS as a clinical runtime dependency
 
 Clinical applications should not call NZHTS synchronously for routine user-facing or clinical workflows such as type-ahead search, code lookup, code validation or ValueSet expansion. NZHTS is not designed to meet an application's runtime latency, throughput, availability or support requirements. A direct dependency would also expose clinical workflows to internet connectivity, authentication and national-service maintenance events.
 
-Direct access by the IG Publisher and other design-time tools is appropriate; direct access on every clinical transaction is not.
+Direct access by the IG Publisher and other design-time tools is the intended use case; direct access by end user applications for every clinical transaction are better served by more local services.
 
 ### Production application pattern
 
