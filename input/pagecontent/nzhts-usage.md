@@ -10,7 +10,7 @@ NZHTS is currently intended to be used for:
 * discovering CodeSystems, ValueSets, ConceptMaps, NamingSystems etc. and updates to these terminology artifacts;
 * sourcing authoritative reference material for implementation, testing or distribution;
 * design-time terminology operations, including validating and expanding terminology during a [FHIR IG publication workflow](tx-ecosystem.html); and
-* obtaining versioned terminology content through the [NZHTS syndication feed](https://nzhts.digital.health.nz/synd/syndication.xml) for loading into downstream terminology services.
+* obtaining versioned terminology content through the APIs and [syndication feed](https://nzhts.digital.health.nz/synd/syndication.xml) for loading into downstream terminology services.
 
 These are human-in-the-loop, authoring, build-time or content-distribution activities. They are normally tolerant of network access, authentication and the operational characteristics of a shared national service.
 
@@ -24,8 +24,7 @@ Direct access by the IG Publisher and other design-time tools is appropriate; di
 
 The expected production pattern is:
 
-`NZHTS national master -> syndication feed -> integrator-managed terminology service -> clinical applications`
+`NZHTS national master -> syndication or scheduled retrieval -> integrator-managed terminology service or local cache -> clinical applications`
 
-An integrator should use the syndication feed to discover and retrieve the required versioned releases, test them, and promote them into its own environment on a controlled schedule. The downstream service may be a high-performance in-memory terminology service for a small, well-defined set of operations, or a separate local FHIR terminology server where richer functions such as `$expand`, `$validate-code`, `$lookup`, subsumption, version history or locally managed terminology are required.
-
+An integrator should use the APIs or syndication feed to discover and retrieve the required versioned releases. The downstream service may be a local cache, an  in-memory terminology service for a small, well-defined set of operations, or a separate local FHIR terminology server where richer functions such as `$expand`, `$validate-code`, `$lookup`, subsumption, version history are required.
 
